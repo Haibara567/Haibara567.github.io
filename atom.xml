@@ -4,16 +4,16 @@
     <title>寻找未曾见过的你</title>
     <link href="https://haibara567.github.io" />
     <updated>2023-03-26T12:46:25.000Z</updated>
-    <category term="XXX" />
-    <category term="细节问题" />
     <category term="java" />
     <category term="3d建模" />
+    <category term="XXX" />
     <category term="环境" />
-    <category term="博客" />
-    <category term="区块链" />
     <category term="实习" />
+    <category term="细节问题" />
+    <category term="区块链" />
     <category term="数据库" />
     <category term="玩" />
+    <category term="博客" />
     <category term="网址" />
     <entry>
         <id>https://haibara567.github.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
@@ -610,6 +610,23 @@ exec master…xp cmdshe11 ‘ping 10.8.16.1’&lt;/p&gt;
         <updated>2023-03-08T13:46:25.000Z</updated>
     </entry>
     <entry>
+        <id>https://haibara567.github.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</id>
+        <title>项目问题</title>
+        <link rel="alternate" href="https://haibara567.github.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;springboot的优势&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#springboot的优势&#34;&gt;#&lt;/a&gt; Springboot 的优势&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;通过简化配置可以快速搭建 Spring 应用程序。&lt;/li&gt;
+&lt;li&gt;内嵌 servlet 容器，能够直接使用 java 的 main 方法启动，因此也不需要部署 war 包文件。&lt;/li&gt;
+&lt;li&gt;提供 starter 简化 Maven 配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;有监督学习和无监督学习的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有监督学习和无监督学习的区别&#34;&gt;#&lt;/a&gt; 有监督学习和无监督学习的区别&lt;/h1&gt;
+&lt;p&gt;有监督：通过已有的训练样本（即已知数据及其对应的输出）去训练得到一个最优模型&lt;/p&gt;
+&lt;p&gt;无监督：由输入数据中学到或建立一个模型，并依此模式推测新的结果。输入数据没有被标记，也没有确定的结果。&lt;/p&gt;
+</content>
+        <category term="XXX" />
+        <updated>2023-03-08T13:46:25.000Z</updated>
+    </entry>
+    <entry>
         <id>https://haibara567.github.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E8%8B%B1%E8%AF%AD%E9%97%AE%E9%A2%98/</id>
         <title>英语问题</title>
         <link rel="alternate" href="https://haibara567.github.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E8%8B%B1%E8%AF%AD%E9%97%AE%E9%A2%98/"/>
@@ -644,23 +661,6 @@ exec master…xp cmdshe11 ‘ping 10.8.16.1’&lt;/p&gt;
 &lt;p&gt;递归就是指程序调用自身&lt;/p&gt;
 &lt;p&gt;迭代是利用已知的变量值，根据递推公式不断演进得到变量新值&lt;/p&gt;
 &lt;h1 id=&#34;也会找英语小短文看过之后翻译&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#也会找英语小短文看过之后翻译&#34;&gt;#&lt;/a&gt; 也会找英语小短文，看过之后翻译&lt;/h1&gt;
-</content>
-        <category term="XXX" />
-        <updated>2023-03-08T13:46:25.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://haibara567.github.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</id>
-        <title>项目问题</title>
-        <link rel="alternate" href="https://haibara567.github.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/"/>
-        <content type="html">&lt;h1 id=&#34;springboot的优势&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#springboot的优势&#34;&gt;#&lt;/a&gt; Springboot 的优势&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;通过简化配置可以快速搭建 Spring 应用程序。&lt;/li&gt;
-&lt;li&gt;内嵌 servlet 容器，能够直接使用 java 的 main 方法启动，因此也不需要部署 war 包文件。&lt;/li&gt;
-&lt;li&gt;提供 starter 简化 Maven 配置。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;有监督学习和无监督学习的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有监督学习和无监督学习的区别&#34;&gt;#&lt;/a&gt; 有监督学习和无监督学习的区别&lt;/h1&gt;
-&lt;p&gt;有监督：通过已有的训练样本（即已知数据及其对应的输出）去训练得到一个最优模型&lt;/p&gt;
-&lt;p&gt;无监督：由输入数据中学到或建立一个模型，并依此模式推测新的结果。输入数据没有被标记，也没有确定的结果。&lt;/p&gt;
 </content>
         <category term="XXX" />
         <updated>2023-03-08T13:46:25.000Z</updated>
@@ -906,6 +906,17 @@ return 0;
         <updated>2023-02-24T12:46:25.000Z</updated>
     </entry>
     <entry>
+        <id>https://haibara567.github.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</id>
+        <title>实习面试问题</title>
+        <link rel="alternate" href="https://haibara567.github.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;如何判断一个链表有无环&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何判断一个链表有无环&#34;&gt;#&lt;/a&gt; 如何判断一个链表有无环&lt;/h1&gt;
+&lt;h1 id=&#34;二叉树的遍历方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二叉树的遍历方式&#34;&gt;#&lt;/a&gt; 二叉树的遍历方式&lt;/h1&gt;
+&lt;h1 id=&#34;快速排序与冒泡排序的比较&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速排序与冒泡排序的比较&#34;&gt;#&lt;/a&gt; 快速排序与冒泡排序的比较&lt;/h1&gt;
+</content>
+        <category term="实习" />
+        <updated>2023-02-24T12:46:25.000Z</updated>
+    </entry>
+    <entry>
         <id>https://haibara567.github.io/2023/02/24/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
         <title>本站自身建设</title>
         <link rel="alternate" href="https://haibara567.github.io/2023/02/24/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
@@ -926,17 +937,6 @@ return 0;
 &lt;p&gt;&lt;img data-src=&#34;%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/image-20230311173825147-16852626113381.png&#34; alt=&#34;image-20230311173825147&#34;&gt; 然后上传图片之后复制进 D:\myblog\themes\shoka_images.yml 文件中，按照上面格式添加即可。&lt;/p&gt;
 </content>
         <category term="博客" />
-        <updated>2023-02-24T12:46:25.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://haibara567.github.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</id>
-        <title>实习面试问题</title>
-        <link rel="alternate" href="https://haibara567.github.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/"/>
-        <content type="html">&lt;h1 id=&#34;如何判断一个链表有无环&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何判断一个链表有无环&#34;&gt;#&lt;/a&gt; 如何判断一个链表有无环&lt;/h1&gt;
-&lt;h1 id=&#34;二叉树的遍历方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二叉树的遍历方式&#34;&gt;#&lt;/a&gt; 二叉树的遍历方式&lt;/h1&gt;
-&lt;h1 id=&#34;快速排序与冒泡排序的比较&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速排序与冒泡排序的比较&#34;&gt;#&lt;/a&gt; 快速排序与冒泡排序的比较&lt;/h1&gt;
-</content>
-        <category term="实习" />
         <updated>2023-02-24T12:46:25.000Z</updated>
     </entry>
 </feed>

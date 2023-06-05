@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>寻找未曾见过的你 • Posts by &#34;c&#34; category</title>
-        <link>https://ashgen.gitee.io</link>
+        <link>https://haibara567.github.io</link>
         <description>吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。</description>
         <language>zh-CN</language>
         <pubDate>Fri, 17 Mar 2023 16:18:25 +0800</pubDate>
@@ -19,9 +19,9 @@
         <category>玩</category>
         <category>网址</category>
         <item>
-            <guid isPermalink="true">https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/</guid>
+            <guid isPermalink="true">https://haibara567.github.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/</guid>
             <title>C++实用函数</title>
-            <link>https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/</link>
+            <link>https://haibara567.github.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/</link>
             <category>XXX</category>
             <pubDate>Fri, 17 Mar 2023 16:18:25 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;strtok&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#strtok&#34;&gt;#&lt;/a&gt; strtok()&lt;/h1&gt;
@@ -262,9 +262,9 @@ int main() &amp;#123;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/</guid>
+            <guid isPermalink="true">https://haibara567.github.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/</guid>
             <title>C++问题</title>
-            <link>https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/</link>
+            <link>https://haibara567.github.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/</link>
             <category>细节问题</category>
             <pubDate>Sat, 04 Mar 2023 11:24:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;使用范围 for 语句时，变量需定义在内部&lt;/p&gt;
@@ -291,9 +291,9 @@ return 0;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/</guid>
+            <guid isPermalink="true">https://haibara567.github.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/</guid>
             <title>C语言问题</title>
-            <link>https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/</link>
+            <link>https://haibara567.github.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/</link>
             <category>细节问题</category>
             <pubDate>Tue, 28 Feb 2023 17:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;数组名取地址a&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组名取地址a&#34;&gt;#&lt;/a&gt; 数组名取地址 &amp;amp; a&lt;/h1&gt;

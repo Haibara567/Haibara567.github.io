@@ -2,11 +2,11 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "寻找未曾见过的你 • All posts by \"实习\" category",
     "description": "吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。",
-    "home_page_url": "https://ashgen.gitee.io",
+    "home_page_url": "https://haibara567.github.io",
     "items": [
         {
-            "id": "https://ashgen.gitee.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/",
-            "url": "https://ashgen.gitee.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/",
+            "id": "https://haibara567.github.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/",
+            "url": "https://haibara567.github.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/",
             "title": "实习面试问题",
             "date_published": "2023-02-24T12:46:25.000Z",
             "content_html": "<h1 id=\"如何判断一个链表有无环\"><a class=\"markdownIt-Anchor\" href=\"#如何判断一个链表有无环\">#</a> 如何判断一个链表有无环</h1>\n<h1 id=\"二叉树的遍历方式\"><a class=\"markdownIt-Anchor\" href=\"#二叉树的遍历方式\">#</a> 二叉树的遍历方式</h1>\n<h1 id=\"快速排序与冒泡排序的比较\"><a class=\"markdownIt-Anchor\" href=\"#快速排序与冒泡排序的比较\">#</a> 快速排序与冒泡排序的比较</h1>\n",

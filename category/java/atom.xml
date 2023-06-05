@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ashgen.gitee.io</id>
+    <id>https://haibara567.github.io</id>
     <title>寻找未曾见过的你 • Posts by &#34;java&#34; category</title>
-    <link href="https://ashgen.gitee.io" />
+    <link href="https://haibara567.github.io" />
     <updated>2023-03-26T12:46:25.000Z</updated>
     <category term="XXX" />
     <category term="细节问题" />
@@ -16,9 +16,9 @@
     <category term="玩" />
     <category term="网址" />
     <entry>
-        <id>https://ashgen.gitee.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+        <id>https://haibara567.github.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
         <title>JDK与JRE的区别</title>
-        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+        <link rel="alternate" href="https://haibara567.github.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
         <content type="html">&lt;p&gt;JDK 和 JRE 是 Java 开发和运行工具，其中 JDK 包含了 JRE，但是 JRE 是可以独立安装的，它们在 Java 开发和运行的时候起到不同的作用&lt;/p&gt;
 &lt;h1 id=&#34;1jdk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1jdk&#34;&gt;#&lt;/a&gt; 1.JDK&lt;/h1&gt;
 &lt;p&gt;​    JDK 是 Java Development Kit 的缩写，是 Java 的开发工具包，主要包含了各种类库和工具，当然也包含了另外一个 JRE.。那么为什么要包含另外一个 JRE 呢？而且 &amp;lt;JDK 安装目录&amp;gt;/JRE/bin 目录下，包含有 server 一个文件夹～包含一个 jvm.dll，这说明 JDK 提供了一个虚拟机。&lt;/p&gt;
@@ -40,9 +40,9 @@ java 运行必须依赖于 jdk 环境，但是不一定要用 tomcat 容器，�
         <updated>2023-03-26T12:46:25.000Z</updated>
     </entry>
     <entry>
-        <id>https://ashgen.gitee.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/</id>
+        <id>https://haibara567.github.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/</id>
         <title>Spring简介</title>
-        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/"/>
+        <link rel="alternate" href="https://haibara567.github.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/"/>
         <content type="html">&lt;h1 id=&#34;spring简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring简介&#34;&gt;#&lt;/a&gt; Spring 简介&lt;/h1&gt;
 &lt;p&gt;Spring 是一个轻量级 Java 开发框架，最早有 Rod Johnson 创建，目的是为了解决企业级应用开发的业务逻辑层和其他各层的耦合问题。它是一个分层的 JavaSE/JavaEE full-stack（一站式）轻量级开源框架，为开发 Java 应用程序提供全面的基础架构支持。Spring 负责基础架构，因此 Java 开发者可以专注于应用程序的开发。&lt;/p&gt;
 &lt;p&gt;Spring 最根本的使命是解决企业级应用开发的复杂性，即简化 Java 开发。&lt;/p&gt;

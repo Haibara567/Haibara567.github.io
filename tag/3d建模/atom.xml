@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ashgen.gitee.io</id>
+    <id>https://haibara567.github.io</id>
     <title>寻找未曾见过的你 • Posts by &#34;3d建模&#34; tag</title>
-    <link href="https://ashgen.gitee.io" />
+    <link href="https://haibara567.github.io" />
     <updated>2023-02-25T12:46:25.000Z</updated>
     <category term="XXX" />
     <category term="细节问题" />
@@ -16,9 +16,9 @@
     <category term="玩" />
     <category term="网址" />
     <entry>
-        <id>https://ashgen.gitee.io/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/</id>
+        <id>https://haibara567.github.io/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/</id>
         <title>sketchup导入Unity3d</title>
-        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/"/>
+        <link rel="alternate" href="https://haibara567.github.io/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/"/>
         <content type="html">&lt;ol&gt;
 &lt;li&gt;新建 SketchUp 工程的时候，选择工程单位为 Meter (米)，如果不是米，则在 Tools -&amp;gt; Model Info -&amp;gt; Unit 内将 Format 修改为 Decimal : Meters 即可。因为会影响到 SketchUp 的原图，所以请注意如果精度不够的话还需要把 Precision 变更为足够的精度，把 Enable length snapping 也设置为和精度一致使其能够正确的执行自动捕捉。&lt;/li&gt;
 &lt;li&gt;导出时注意选择参数，请选择 File -&amp;gt; Export -&amp;gt; 3D Model 里面有 FBX 这个格式（好像只有 Pro 版本的 SketchUp 才行哦），先不要着急 Export，选择一下 Options 修改几个选项，Export Options 中的&lt;br&gt;
@@ -34,9 +34,9 @@
         <updated>2023-02-25T12:46:25.000Z</updated>
     </entry>
     <entry>
-        <id>https://ashgen.gitee.io/2023/02/24/sketchup/sketchup%E5%AF%BC%E5%85%A53dsmax/</id>
+        <id>https://haibara567.github.io/2023/02/24/sketchup/sketchup%E5%AF%BC%E5%85%A53dsmax/</id>
         <title>sketchup导入3dsmax</title>
-        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/24/sketchup/sketchup%E5%AF%BC%E5%85%A53dsmax/"/>
+        <link rel="alternate" href="https://haibara567.github.io/2023/02/24/sketchup/sketchup%E5%AF%BC%E5%85%A53dsmax/"/>
         <content type="html">&lt;p&gt;sketchup——》unity3d 丢失模型贴图问题解决：打开 su 模型，文件→另存为→保存文件类型下拉另存为 8 版本&lt;img data-src=&#34;sketchup%E5%AF%BC%E5%85%A53dsmax/image-20230225153742223.png&#34; alt=&#34;image-20230225153742223&#34;&gt;&lt;/p&gt;
 </content>
         <category term="3d建模" />

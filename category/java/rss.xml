@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>寻找未曾见过的你 • Posts by &#34;java&#34; category</title>
-        <link>https://ashgen.gitee.io</link>
+        <link>https://haibara567.github.io</link>
         <description>吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。</description>
         <language>zh-CN</language>
         <pubDate>Sun, 26 Mar 2023 20:46:25 +0800</pubDate>
@@ -19,9 +19,9 @@
         <category>玩</category>
         <category>网址</category>
         <item>
-            <guid isPermalink="true">https://ashgen.gitee.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+            <guid isPermalink="true">https://haibara567.github.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
             <title>JDK与JRE的区别</title>
-            <link>https://ashgen.gitee.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+            <link>https://haibara567.github.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
             <category>java</category>
             <pubDate>Sun, 26 Mar 2023 20:46:25 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;JDK 和 JRE 是 Java 开发和运行工具，其中 JDK 包含了 JRE，但是 JRE 是可以独立安装的，它们在 Java 开发和运行的时候起到不同的作用&lt;/p&gt;
@@ -43,9 +43,9 @@ java 运行必须依赖于 jdk 环境，但是不一定要用 tomcat 容器，�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ashgen.gitee.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/</guid>
+            <guid isPermalink="true">https://haibara567.github.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/</guid>
             <title>Spring简介</title>
-            <link>https://ashgen.gitee.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/</link>
+            <link>https://haibara567.github.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/</link>
             <category>java</category>
             <pubDate>Sun, 26 Mar 2023 13:46:25 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;spring简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring简介&#34;&gt;#&lt;/a&gt; Spring 简介&lt;/h1&gt;

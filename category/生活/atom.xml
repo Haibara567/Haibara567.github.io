@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ashgen.gitee.io</id>
+    <id>https://haibara567.github.io</id>
     <title>寻找未曾见过的你 • Posts by &#34;生活&#34; category</title>
-    <link href="https://ashgen.gitee.io" />
+    <link href="https://haibara567.github.io" />
     <updated>2023-02-25T16:16:12.864Z</updated>
     <category term="XXX" />
     <category term="细节问题" />
@@ -16,9 +16,9 @@
     <category term="玩" />
     <category term="网址" />
     <entry>
-        <id>https://ashgen.gitee.io/2023/02/26/%E7%94%9F%E6%B4%BB/%E5%8C%97%E4%BA%AC%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/</id>
+        <id>https://haibara567.github.io/2023/02/26/%E7%94%9F%E6%B4%BB/%E5%8C%97%E4%BA%AC%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/</id>
         <title>北京游玩攻略</title>
-        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/26/%E7%94%9F%E6%B4%BB/%E5%8C%97%E4%BA%AC%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/"/>
+        <link rel="alternate" href="https://haibara567.github.io/2023/02/26/%E7%94%9F%E6%B4%BB/%E5%8C%97%E4%BA%AC%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/"/>
         <content type="html">&lt;h1 id=&#34;吃&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#吃&#34;&gt;#&lt;/a&gt; 吃&lt;/h1&gt;
 &lt;p&gt;牛街                 西城区约 2 小时&lt;/p&gt;
 &lt;p&gt;王府井               东城区约 2 小时&lt;/p&gt;

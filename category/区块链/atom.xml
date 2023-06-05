@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ashgen.gitee.io</id>
+    <id>https://haibara567.github.io</id>
     <title>寻找未曾见过的你 • Posts by &#34;区块链&#34; category</title>
-    <link href="https://ashgen.gitee.io" />
+    <link href="https://haibara567.github.io" />
     <updated>2023-03-01T02:31:25.000Z</updated>
     <category term="XXX" />
     <category term="细节问题" />
@@ -16,9 +16,9 @@
     <category term="玩" />
     <category term="网址" />
     <entry>
-        <id>https://ashgen.gitee.io/2023/03/01/%E5%8C%BA%E5%9D%97%E9%93%BE/Hyperledger%20Fabric%E8%81%94%E7%9B%9F%E9%93%BE%E7%AE%80%E4%BB%8B/</id>
+        <id>https://haibara567.github.io/2023/03/01/%E5%8C%BA%E5%9D%97%E9%93%BE/Hyperledger%20Fabric%E8%81%94%E7%9B%9F%E9%93%BE%E7%AE%80%E4%BB%8B/</id>
         <title>联盟链简介</title>
-        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/01/%E5%8C%BA%E5%9D%97%E9%93%BE/Hyperledger%20Fabric%E8%81%94%E7%9B%9F%E9%93%BE%E7%AE%80%E4%BB%8B/"/>
+        <link rel="alternate" href="https://haibara567.github.io/2023/03/01/%E5%8C%BA%E5%9D%97%E9%93%BE/Hyperledger%20Fabric%E8%81%94%E7%9B%9F%E9%93%BE%E7%AE%80%E4%BB%8B/"/>
         <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC85MTQzMTg4NQ==&#34;&gt;区块链交易原理&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC84OTMzMzQwMg==&#34;&gt;公有链、私有链、联盟链的区别&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21hb3FpdWtlamkvYXJ0aWNsZS9kZXRhaWxzLzExOTcyOTM3NQ==&#34;&gt;许可区块链与无许可区块链&lt;/span&gt;&lt;/p&gt;

@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>寻找未曾见过的你 • Posts by &#34;环境&#34; tag</title>
-        <link>https://ashgen.gitee.io</link>
+        <link>https://haibara567.github.io</link>
         <description>吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。</description>
         <language>zh-CN</language>
         <pubDate>Mon, 27 Feb 2023 21:46:25 +0800</pubDate>
@@ -19,9 +19,9 @@
         <category>玩</category>
         <category>网址</category>
         <item>
-            <guid isPermalink="true">https://ashgen.gitee.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/</guid>
+            <guid isPermalink="true">https://haibara567.github.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/</guid>
             <title>python环境配置</title>
-            <link>https://ashgen.gitee.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/</link>
+            <link>https://haibara567.github.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/</link>
             <category>环境</category>
             <pubDate>Mon, 27 Feb 2023 21:46:25 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;anaconda装完后pip无法使用的问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#anaconda装完后pip无法使用的问题&#34;&gt;#&lt;/a&gt; anaconda 装完后，pip 无法使用的问题&lt;/h1&gt;

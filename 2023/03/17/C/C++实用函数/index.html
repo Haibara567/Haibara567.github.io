@@ -1,0 +1,798 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="寻找未曾见过的你" href="https://ashgen.gitee.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="寻找未曾见过的你" href="https://ashgen.gitee.io/atom.xml" />
+<link rel="alternate" type="application/json" title="寻找未曾见过的你" href="https://ashgen.gitee.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="XXX" />
+
+
+<link rel="canonical" href="https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/">
+
+
+
+  <title>
+C++实用函数 - C |
+米花町2丁目21番地 = 寻找未曾见过的你 = 本站制作时长两年半</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">C++实用函数
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-17 16:18:25">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-17T16:18:25+08:00">2023-03-17</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">米花町2丁目21番地</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/26/cGdkKDfU5EF8NvI.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/24/yOPEmBw82Se3lCs.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/24/Qs79B1wVMhzNTqZ.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/03/07/Kg6GpsH3htNBrVz.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/26/2EZf4ajOwus8XHC.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/24/Xj526Qu7LASvrin.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/C/" itemprop="item" rel="index" title="分类于 C"><span itemprop="name">C</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/haibara.png">
+    <meta itemprop="name" content="Ashgen">
+    <meta itemprop="description" content="本站制作时长两年半, 吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="寻找未曾见过的你">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="strtok"><a class="markdownIt-Anchor" href="#strtok">#</a> strtok()</h1>
+<h2 id="描述"><a class="markdownIt-Anchor" href="#描述">#</a> 描述</h2>
+<p>C 库函数 <strong>char *strtok(char *str, const char *delim)</strong> 分解字符串 <strong>str</strong> 为一组字符串，<strong>delim</strong> 为分隔符。</p>
+<h2 id="声明"><a class="markdownIt-Anchor" href="#声明">#</a> 声明</h2>
+<p>下面是 strtok () 函数的声明。</p>
+<pre><code>char *strtok(char *str, const char *delim)
+</code></pre>
+<h2 id="参数"><a class="markdownIt-Anchor" href="#参数">#</a> 参数</h2>
+<ul>
+<li><strong>str</strong> – 要被分解成一组小字符串的字符串。</li>
+<li><strong>delim</strong> – 包含分隔符的 C 字符串。</li>
+</ul>
+<h2 id="返回值"><a class="markdownIt-Anchor" href="#返回值">#</a> 返回值</h2>
+<p>该函数返回被分解的第一个子字符串，如果没有可检索的字符串，则返回一个空指针。</p>
+<h2 id="实例"><a class="markdownIt-Anchor" href="#实例">#</a> 实例</h2>
+<p>下面的实例演示了 strtok () 函数的用法。</p>
+<h2 id="实例-2"><a class="markdownIt-Anchor" href="#实例-2">#</a> 实例</h2>
+<figure class="highlight c"><figcaption data-lang="c"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h></span> </span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span>  </span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>   </pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">char</span> str<span class="token punctuation">[</span><span class="token number">80</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"This is - www.runoob.com - website"</span><span class="token punctuation">;</span>   </pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">const</span> <span class="token keyword">char</span> s<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"-"</span><span class="token punctuation">;</span>   </pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">char</span> <span class="token operator">*</span>token<span class="token punctuation">;</span>      <span class="token comment">/* 获取第一个子字符串 */</span>   </pre></td></tr><tr><td data-num="7"></td><td><pre>    token <span class="token operator">=</span> <span class="token function">strtok</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">/* 继续获取其他的子字符串 */</span>   </pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">while</span><span class="token punctuation">(</span> token <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>      </pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token function">printf</span><span class="token punctuation">(</span> <span class="token string">"%s\n"</span><span class="token punctuation">,</span> token <span class="token punctuation">)</span><span class="token punctuation">;</span>          </pre></td></tr><tr><td data-num="10"></td><td><pre>        token <span class="token operator">=</span> <span class="token function">strtok</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">;</span>   </pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token punctuation">&#125;</span>      </pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> </pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>让我们编译并运行上面的程序，这将产生以下结果：</p>
+<pre><code>This is 
+ www.runoob.com 
+ website
+</code></pre>
+<h1 id="string中c_str-data-copypn函数的用法"><a class="markdownIt-Anchor" href="#string中c_str-data-copypn函数的用法">#</a> string 中 c_str ()、data ()、copy (p,n) 函数的用法</h1>
+<p>标准库的 string 类提供了 3 个成员函数来从一个 string 得到 c 类型的字符数组：c_str ()、data ()、copy (p,n)。</p>
+<h2 id="c_str生成一个const-char指针指向以空字符终止的数组"><a class="markdownIt-Anchor" href="#c_str生成一个const-char指针指向以空字符终止的数组">#</a> c_str ()：生成一个 const char * 指针，指向以空字符终止的数组。</h2>
+<p>①这个数组的数据是临时的，当有一个改变这些数据的成员函数被调用后，其中的数据就会失效。因此要么现用先转换，要么把它的数据复制到用户自己可以管理的内存中。注意。看下例：</p>
+<pre><code class="language-c++">const char* c;
+string s=&quot;1234&quot;;
+c = s.c_str(); 
+cout&lt;&lt;c&lt;&lt;endl; //输出：1234
+s=&quot;abcd&quot;;
+cout&lt;&lt;c&lt;&lt;endl; //输出：abcd
+</code></pre>
+<p>上面如果继续用 c 指针的话，导致的错误将是不可想象的。就如：1234 变为 abcd</p>
+<p>其实上面的 c = s.c_str (); 不是一个好习惯。既然 c 指针指向的内容容易失效，我们就应该按照上面的方法，那怎么把数据复制出来呢？这就要用到 strcpy 等函数（推荐）。</p>
+<pre><code class="language-c++">//const char* c; //①
+//char* c;       //②
+//char c[20]; 
+char* c=new char[20];
+string s=&quot;1234&quot;;
+//c = s.c_str(); 
+strcpy(c,s.c_str());
+cout&lt;&lt;c&lt;&lt;endl; //输出：1234
+s=&quot;abcd&quot;;
+cout&lt;&lt;c&lt;&lt;endl; //输出：1234
+</code></pre>
+<p>注意：不能再像上面一样①所示了，const 还怎么向里面写入值啊；也不能②所示，使用了未初始化的局部变量 “c”，运行会出错的 。</p>
+<p>② c_str () 返回一个客户程序可读不可改的指向字符数组的指针，不需要手动释放或删除这个指针。</p>
+<p><strong>data (): 与 c_str () 类似，但是返回的数组不以空字符终止。</strong></p>
+<h1 id="sort"><a class="markdownIt-Anchor" href="#sort">#</a> sort()</h1>
+<p>对指定范围内元素进行快速排序</p>
+<p>sort 是 STL 自带的系统函数，它的格式是：</p>
+<p>void sort (要排序元素的起始地址，要排序元素的结束地址，比较函数)；</p>
+<p>这里可以省略比较函数，他是默认从小到大排序的（升序排序）</p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+&#123;
+	int a[]=&#123;3,5,2,6,9,3,5&#125;;
+	sort(a,a+7);//7是数组的元素个数，这里a为数组的开头，a+7就等于排序到数组的第七个元素
+	for(int i=0;i&lt;6;i++)
+		cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;
+&#125;
+</code></pre>
+<p>输出:</p>
+<p>2 3 3 5 5 6</p>
+<p>void sort (要排序元素的起始地址，要排序元素的结束地址，比较函数)；</p>
+<p>这个比较函数的作用就是可以自定义排序方式，比如降序排序。</p>
+<p>定义：bool cmp (int x,int y)…，如果返回 True 那么 x 就排在 y 前面。</p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;iostream&gt;
+using namespace std;
+bool cmp(int x,int y)
+&#123;
+	if(x&gt;y)return true;//降序
+	return false;
+&#125;
+int main()
+&#123;
+	int a[]=&#123;3,5,2,6,9,3,5&#125;;
+	sort(a,a+7,cmp);//7是数组的元素个数
+	for(int i=0;i&lt;6;i++)
+		cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;
+&#125;
+</code></pre>
+<p>输出：</p>
+<p>9 6 5 5 3 3</p>
+<h1 id="map"><a class="markdownIt-Anchor" href="#map">#</a> Map</h1>
+<p>map 是 STL 的一个关联容器，它提供一对一的 hash。</p>
+<p>第一个可以称为关键字 (key)，每个关键字只能在 map 中出现一次；<br>
+第二个可能称为该关键字的值 (value)；<br>
+定义：<br>
+map &lt;类型，类型&gt; m;<br>
+ 举个栗子:<br>
+ 记录每个人的名字的对应的爱好，张三喜欢吃汉堡：</p>
+<pre><code class="language-c++">#include&lt;map&gt;
+#include&lt;iostream&gt;
+using namespace std;
+int main()
+&#123;
+	map&lt;string,string&gt; m;
+	m[&quot;张三&quot;]=&quot;吃汉堡&quot;;
+	cout&lt;&lt;&quot;张三: &quot;&lt;&lt;m[&quot;张三&quot;]; 
+&#125;
+</code></pre>
+<p>输出：</p>
+<p>张三：吃汉堡</p>
+<h1 id="stack栈"><a class="markdownIt-Anchor" href="#stack栈">#</a> stack (栈)</h1>
+<p>头文件:</p>
+<p>#include<stack><br>
+stack 好像还有个翻译叫 “咸鱼”… 嘿嘿。</stack></p>
+<p>栈的介绍：<br>
+栈就像一个盒子，可以放入或去除元素，但是个人类都知道，要把盒子底下的东西取出来，就必须先取出他上面的东西。</p>
+<p>假如我们把 1、2、3、4、5 按顺序分别入栈：</p>
+<p>栈的定义：<br>
+stack &lt;类型 (可以不写)&gt; st;<br>
+ 或者 stack st;<br>
+ 很 easy 是不？</p>
+<p>栈的成员函数：<br>
+.empty ()	判断栈是否为空，空则返回 true<br>
+.pop ()	移除栈顶元素<br>
+.push (啥啥啥)	在栈顶增加元素<br>
+.size ()	返回栈中元素数目<br>
+.top ()	返回栈顶元素<br>
+.empty ()  判断栈是否为空。</p>
+<pre><code class="language-c++">stack st;
+if(st.empty())//如果是空那么执行下面代码
+    ......
+</code></pre>
+<p>.push (啥啥啥), 在栈顶增加元素。</p>
+<p>.top ()，返回栈顶元素，记住是返回，要单独输出。</p>
+<pre><code class="language-c++">#include&lt;stack&gt;
+#include&lt;iostream&gt;
+using namespace std;
+stack&lt;int&gt; st;
+int main()&#123;
+    st.push(5418);
+    cout&lt;&lt;st.top();//输出栈顶元素
+    return 0;
+
+&#125;
+</code></pre>
+<p>输出 5418。</p>
+<p>​</p>
+<p>.size (), 返回栈中元素数目。</p>
+<pre><code class="language-c++">#include&lt;stack&gt;
+#include&lt;iostream&gt;
+using namespace std;
+stack&lt;int&gt; st;
+int main()&#123;
+    st.push(5418);
+    cout&lt;&lt;st.size();
+    return 0;
+&#125;
+</code></pre>
+<p>输出 1</p>
+<p>.pop ()，移除栈顶元素：</p>
+<pre><code class="language-c++">#include&lt;stack&gt;
+#include&lt;iostream&gt;
+using namespace std;
+stack&lt;int&gt; st;
+int main()&#123;
+    
+
+    st.push(1452);
+    st.push(5418);
+    st.pop();
+    cout&lt;&lt;st.top();
+    
+    return 0;
+
+&#125;
+</code></pre>
+<p>输出 1452。</p>
+<p>简单不？</p>
+<h1 id="二分查找"><a class="markdownIt-Anchor" href="#二分查找">#</a> 二分查找</h1>
+<p>头文件：</p>
+<pre><code class="language-c++">#include &lt;algorithm&gt;
+</code></pre>
+<p>美妙的函数：</p>
+<h2 id="1lower_bound函数"><a class="markdownIt-Anchor" href="#1lower_bound函数">#</a> 1.lower_bound 函数</h2>
+<p>对于有序容器，有序容器，有序容器（重要的事情说三遍）快速二分查找出第一个大于等于</p>
+<p>指定数的位置（下标），如果没有找到，返回最后一个数据后面的位置。</p>
+<p>对于数组，通常的格式为：</p>
+<p>查找的数组下标 = lower_bound (数组要查找的开始位置，数组要查找的结束位置后面，要找的数) – 数组开始位置 (一般写数组名);</p>
+<p>比如：</p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() &#123;
+
+    int a[5] = &#123; 1,2,3,3,8 &#125;;
+     
+    //从 a 数组中找到第一个不小于   3 的元素
+     
+    int   index = lower_bound(a, a + 5, 3)-a;//查找的数组下标 = lower_bound(数组要查找的开始位置，数组要查找的结束位置后面，要找的数) – 数组开始位置;
+     
+    if   (index==5 ) cout &lt;&lt; &quot; not found! &quot;;//index=5，也就是数组末尾的位置。
+    else  cout &lt;&lt; index;
+     
+    return   0;
+
+&#125;
+</code></pre>
+<p>输出 2。</p>
+<h2 id="2upper_bound函数"><a class="markdownIt-Anchor" href="#2upper_bound函数">#</a> 2.upper_bound 函数</h2>
+<p>有一个类似 lower_bound 的函数 upper_bound, 快速二分查找出第一个大于指定数的位置（下</p>
+<p>标），如果没有找到，返回最后一个数据后面的位置。</p>
+<p>举个栗子，啊… 快没栗子了。(っ °Д °;) っ</p>
+<pre><code class="language-c++">#include&lt;algorithm&gt;
+#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() &#123;
+
+    int a[5] = &#123; 1,2,3,3,8 &#125;;
+    //从 a 数组中找到第一个大于 3 的元素
+     
+    int   index = upper_bound(a, a + 5, 3)-a;
+     
+    if   (index==5 ) cout &lt;&lt; &quot; not found! &quot;;
+    else cout &lt;&lt; index;
+     
+    return   0;
+
+&#125;
+</code></pre>
+<p>输出 4.</p>
+<h2 id="3binary_search查找数组内某个元素是否出现"><a class="markdownIt-Anchor" href="#3binary_search查找数组内某个元素是否出现">#</a> 3.binary_search：查找数组内某个元素是否出现。</h2>
+<p>void binary_search (数组首地址，结束地址，要查找的数)</p>
+<p>返回值为 bool 类型，找到了返回 true。</p>
+
+      <div class="tags">
+          <a href="/tags/XXX/" rel="tag"><i class="ic i-tag"></i> XXX</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-03-29 20:43:24" itemprop="dateModified" datetime="2023-03-29T20:43:24+08:00">2023-03-29</time>
+  </span>
+  <span id="2023/03/17/C/C++实用函数/" class="item leancloud_visitors" data-flag-title="C++实用函数" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Ashgen 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Ashgen 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Ashgen QQ">
+        <p>QQ</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Ashgen <i class="ic i-at"><em>@</em></i>寻找未曾见过的你
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/" title="C++实用函数">https://ashgen.gitee.io/2023/03/17/C/C++实用函数/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2023&#x2F;02&#x2F;24&#x2F;JWm3HtDZPT4SB9v.jpg" title="第八章：数据库编程">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数据库</span>
+  <h3>第八章：数据库编程</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2023&#x2F;02&#x2F;24&#x2F;8yBeLOYfSqnip2o.png" title="第六章关系数据理论">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数据库</span>
+  <h3>第六章关系数据理论</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#strtok"><span class="toc-number">1.</span> <span class="toc-text"> strtok()</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text"> 描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-number">1.2.</span> <span class="toc-text"> 声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text"> 参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">1.4.</span> <span class="toc-text"> 返回值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.5.</span> <span class="toc-text"> 实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="toc-number">1.6.</span> <span class="toc-text"> 实例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#string%E4%B8%ADc_str-data-copypn%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text"> string 中 c_str ()、data ()、copy (p,n) 函数的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#c_str%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AAconst-char%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E4%BB%A5%E7%A9%BA%E5%AD%97%E7%AC%A6%E7%BB%88%E6%AD%A2%E7%9A%84%E6%95%B0%E7%BB%84"><span class="toc-number">2.1.</span> <span class="toc-text"> c_str ()：生成一个 const char * 指针，指向以空字符终止的数组。</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sort"><span class="toc-number">3.</span> <span class="toc-text"> sort()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#map"><span class="toc-number">4.</span> <span class="toc-text"> Map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#stack%E6%A0%88"><span class="toc-number">5.</span> <span class="toc-text"> stack (栈)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-number">6.</span> <span class="toc-text"> 二分查找</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1lower_bound%E5%87%BD%E6%95%B0"><span class="toc-number">6.1.</span> <span class="toc-text"> 1.lower_bound 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2upper_bound%E5%87%BD%E6%95%B0"><span class="toc-number">6.2.</span> <span class="toc-text"> 2.upper_bound 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3binary_search%E6%9F%A5%E6%89%BE%E6%95%B0%E7%BB%84%E5%86%85%E6%9F%90%E4%B8%AA%E5%85%83%E7%B4%A0%E6%98%AF%E5%90%A6%E5%87%BA%E7%8E%B0"><span class="toc-number">6.3.</span> <span class="toc-text"> 3.binary_search：查找数组内某个元素是否出现。</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/" rel="bookmark" title="C语言问题">C语言问题</a></li><li><a href="/2023/03/04/C/C++%E9%97%AE%E9%A2%98/" rel="bookmark" title="C++问题">C++问题</a></li><li class="active"><a href="/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/" rel="bookmark" title="C++实用函数">C++实用函数</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ashgen"
+      data-src="/images/haibara.png">
+  <p class="name" itemprop="name">Ashgen</p>
+  <div class="description" itemprop="description">吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">23</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">11</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">11</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS93dS1jaGFuLWppZS1qaS05OC05NQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;wu-chan-jie-ji-98-95"><i class="ic i-zhihu"></i></span>
+      <a href="/barbatos@foxmail.com" title="barbatos@foxmail.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friend-links/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/" title="分类于 研究生复试">研究生复试</a>
+</div>
+
+    <span><a href="/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98/" title="专业问题">专业问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%94%9F%E6%B4%BB/" title="分类于 生活">生活</a>
+</div>
+
+    <span><a href="/2023/02/26/%E7%94%9F%E6%B4%BB/%E5%8C%97%E4%BA%AC%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/" title="北京游玩攻略">北京游玩攻略</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/" title="分类于 shoka博客主题">shoka博客主题</a>
+</div>
+
+    <span><a href="/2023/02/24/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" title="本站自身建设">本站自身建设</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/" title="分类于 研究生复试">研究生复试</a>
+</div>
+
+    <span><a href="/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/" title="项目问题">项目问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C/" title="分类于 C">C</a>
+</div>
+
+    <span><a href="/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/" title="C++实用函数">C++实用函数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/11/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/2023/03/06/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%AA%E8%AE%BA/" title="第一章：数据库系统概述">第一章：数据库系统概述</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/sketchup/" title="分类于 sketchup">sketchup</a>
+</div>
+
+    <span><a href="/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/" title="sketchup导入Unity3d">sketchup导入Unity3d</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 java">java</a>
+</div>
+
+    <span><a href="/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/" title="Spring简介">Spring简介</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%89%E7%AB%A0/" title="第三章">第三章</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ashgen @ 米花町2丁目21番地</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">22k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">20 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/17/C/C++实用函数/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

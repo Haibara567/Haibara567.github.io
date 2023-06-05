@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ashgen.gitee.io</id>
+    <title>寻找未曾见过的你 • Posts by &#34;细节问题&#34; tag</title>
+    <link href="https://ashgen.gitee.io" />
+    <updated>2023-03-04T03:24:00.000Z</updated>
+    <category term="XXX" />
+    <category term="细节问题" />
+    <category term="java" />
+    <category term="3d建模" />
+    <category term="环境" />
+    <category term="博客" />
+    <category term="区块链" />
+    <category term="实习" />
+    <category term="数据库" />
+    <category term="玩" />
+    <category term="网址" />
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/</id>
+        <title>C++问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;p&gt;使用范围 for 语句时，变量需定义在内部&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;for(auto c : line)
+		c=toupper(c);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;字符串转整数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串转整数&#34;&gt;#&lt;/a&gt; 字符串转整数&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;string s=&amp;quot;123&amp;quot;;
+stringstream ss;
+int x=0;
+ss&amp;lt;&amp;lt;s;
+ss&amp;gt;&amp;gt;x;
+cout&amp;lt;&amp;lt;x+1&amp;lt;&amp;lt;endl;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;整数转字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#整数转字符串&#34;&gt;#&lt;/a&gt; 整数转字符串&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;int s=123;
+stringstream ss;
+string x;
+ss&amp;lt;&amp;lt;s;
+ss&amp;gt;&amp;gt;x;
+cout&amp;lt;&amp;lt;x&amp;lt;&amp;lt;endl;
+return 0;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="细节问题" />
+        <updated>2023-03-04T03:24:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/</id>
+        <title>C语言问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;数组名取地址a&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组名取地址a&#34;&gt;#&lt;/a&gt; 数组名取地址 &amp;amp; a&lt;/h1&gt;
+&lt;p&gt;a 是一个数组名，对于一个普通的变量 b，&amp;amp;b 是指用取地址符号取得变量 b 的存放地址；a 在内存中没有分配空间，只对数组 a 的各个元素分配了存储空间，此处数组名字 a 显然不是普通的变量，&amp;amp;a 也不代表所取 a 的存储地址。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;amp;a 在数值上等于 &amp;amp; a [0]，也等于 a。&lt;strong&gt;此时，&amp;amp;a 数值上等于整个数组的起始位置地址，含义上代表整个数组所占内存的大小，因为它的&lt;/strong&gt;进阶单位是整个数组的字节长度&lt;/strong&gt;，（&amp;amp;a + 1）等于的是数组结束之后的下一段的起始位置地址。&lt;/p&gt;
+</content>
+        <category term="细节问题" />
+        <updated>2023-02-28T09:00:00.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,598 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="寻找未曾见过的你" href="https://ashgen.gitee.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="寻找未曾见过的你" href="https://ashgen.gitee.io/atom.xml" />
+<link rel="alternate" type="application/json" title="寻找未曾见过的你" href="https://ashgen.gitee.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="数据库" />
+
+
+<link rel="canonical" href="https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+
+
+
+  <title>
+第十一章：并发控制 - 数据库 |
+米花町2丁目21番地 = 寻找未曾见过的你 = 本站制作时长两年半</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">第十一章：并发控制
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-12 20:16:25">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-12T20:16:25+08:00">2023-03-12</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>556</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">米花町2丁目21番地</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/24/Qs79B1wVMhzNTqZ.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/24/E6Mdjmt4qbneIpO.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/24/8fV4AyP9cvYRlhW.jpg"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/24/Wtj5TbOBDyzqXHf.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/03/07/MU1ifCRyYQ45V6m.png"></li>
+          <li class="item" data-background-image="https://s2.loli.net/2023/02/24/8yBeLOYfSqnip2o.png"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="item" rel="index" title="分类于 数据库"><span itemprop="name">数据库</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/haibara.png">
+    <meta itemprop="name" content="Ashgen">
+    <meta itemprop="description" content="本站制作时长两年半, 吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="寻找未曾见过的你">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="并发的好处"><a class="markdownIt-Anchor" href="#并发的好处">#</a> 并发的好处</h1>
+<ol>
+<li>改善系统资源利用率</li>
+<li>改善短事务的响应时间</li>
+</ol>
+<h1 id="并发的坏处"><a class="markdownIt-Anchor" href="#并发的坏处">#</a> 并发的坏处</h1>
+<ol>
+<li>
+<p>丢失修改</p>
+<p>事务 A 和 B 读入同一数据并修改，B 提交的结果破坏了 A 提交的</p>
+</li>
+<li>
+<p>不可重复读</p>
+<p>A 读取后，B 修改，A 再读就不一样了</p>
+</li>
+<li>
+<p>读脏数据</p>
+<p>A 修改后，B 读，A 被撤销，B 读到的数据就是脏数据</p>
+</li>
+</ol>
+<h1 id="加锁"><a class="markdownIt-Anchor" href="#加锁">#</a> 加锁</h1>
+<p>几个事务的并行执行是正确的，当且仅当其结果与按某一个次序串行执行事务的结果相同</p>
+<p>排他锁（写锁，X 锁），加上后不能再加其他任何锁</p>
+<p>共享锁（读锁，S 锁），加上后可以再加 S 锁</p>
+<p><strong>一级封锁协议</strong>：事务在修改数据之前必须加 X 锁，事务结束时释放，可防止丢失修改</p>
+<p><strong>二级封锁协议</strong>：一级协议的基础上加上事务在读取数据之前必须加 S 锁，<strong>读完释放</strong>，可防止读脏数据</p>
+<p><strong>三级封锁协议</strong>：一级协议的基础上加上事务在读取数据之前必须加 S 锁，<strong>事务结束时释放</strong>，保证可重复读</p>
+<p><strong>活锁</strong>：某个事务永远处于等待状态，解决方法：先来先服务</p>
+<p><strong>死锁</strong>：多个事务都在等待另一个解除封锁，解决方法：死锁预防、死锁检测</p>
+<p>若一个并行调度的结果等价于某个串行调度的结果，则该并行调度称为<strong>可串行化的调度</strong></p>
+<h1 id="两段锁协议"><a class="markdownIt-Anchor" href="#两段锁协议">#</a> 两段锁协议</h1>
+<p>在对任何数据进行读、写之前，事务必须首先获得该数据的封锁。在释放一个封锁后，事务不得再获得任何其他封锁。即将事务分为两个阶段，第一为获得封锁，第二为释放封锁。</p>
+<p>遵循两段锁协议仍可能死锁。</p>
+<p>对任何一个事务而言，在调度中获得其最后一个锁的时刻，称为该事务的<strong>封锁点</strong>。</p>
+
+      <div class="tags">
+          <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"><i class="ic i-tag"></i> 数据库</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-03-12 20:21:40" itemprop="dateModified" datetime="2023-03-12T20:21:40+08:00">2023-03-12</time>
+  </span>
+  <span id="2023/03/12/数据库/第十一章并发控制/" class="item leancloud_visitors" data-flag-title="第十一章：并发控制" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="Ashgen 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="Ashgen 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="Ashgen QQ">
+        <p>QQ</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Ashgen <i class="ic i-at"><em>@</em></i>寻找未曾见过的你
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/" title="第十一章：并发控制">https://ashgen.gitee.io/2023/03/12/数据库/第十一章并发控制/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2023&#x2F;02&#x2F;24&#x2F;jdvGIJ2msytAMxH.png" title="第十章：数据库系统概述">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数据库</span>
+  <h3>第十章：数据库系统概述</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;s2.loli.net&#x2F;2023&#x2F;02&#x2F;26&#x2F;RsMqpLIlkmSPObQ.png" title="第八章：数据库编程">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数据库</span>
+  <h3>第八章：数据库编程</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">1.</span> <span class="toc-text"> 并发的好处</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E7%9A%84%E5%9D%8F%E5%A4%84"><span class="toc-number">2.</span> <span class="toc-text"> 并发的坏处</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A0%E9%94%81"><span class="toc-number">3.</span> <span class="toc-text"> 加锁</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%A4%E6%AE%B5%E9%94%81%E5%8D%8F%E8%AE%AE"><span class="toc-number">4.</span> <span class="toc-text"> 两段锁协议</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/03/06/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%AA%E8%AE%BA/" rel="bookmark" title="第一章：数据库系统概述">第一章：数据库系统概述</a></li><li><a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF/" rel="bookmark" title="第十章：数据库系统概述">第十章：数据库系统概述</a></li><li class="active"><a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/" rel="bookmark" title="第十一章：并发控制">第十一章：并发控制</a></li><li><a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/" rel="bookmark" title="第八章：数据库编程">第八章：数据库编程</a></li><li><a href="/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA/" rel="bookmark" title="第六章关系数据理论">第六章关系数据理论</a></li><li><a href="/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%89%E7%AB%A0/" rel="bookmark" title="第三章">第三章</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ashgen"
+      data-src="/images/haibara.png">
+  <p class="name" itemprop="name">Ashgen</p>
+  <div class="description" itemprop="description">吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">23</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">11</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">11</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS93dS1jaGFuLWppZS1qaS05OC05NQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;wu-chan-jie-ji-98-95"><i class="ic i-zhihu"></i></span>
+      <a href="/barbatos@foxmail.com" title="barbatos@foxmail.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friend-links/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/" title="分类于 shoka博客主题">shoka博客主题</a>
+</div>
+
+    <span><a href="/2023/02/24/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" title="本站自身建设">本站自身建设</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/" title="分类于 研究生复试">研究生复试</a>
+</div>
+
+    <span><a href="/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98/" title="专业问题">专业问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%94%9F%E6%B4%BB/" title="分类于 生活">生活</a>
+</div>
+
+    <span><a href="/2023/02/26/%E7%94%9F%E6%B4%BB/%E5%8C%97%E4%BA%AC%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/" title="北京游玩攻略">北京游玩攻略</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/2023/03/06/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%AA%E8%AE%BA/" title="第一章：数据库系统概述">第一章：数据库系统概述</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C/" title="分类于 C">C</a>
+</div>
+
+    <span><a href="/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/" title="C++实用函数">C++实用函数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C/" title="分类于 C">C</a>
+</div>
+
+    <span><a href="/2023/03/04/C/C++%E9%97%AE%E9%A2%98/" title="C++问题">C++问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/" title="第八章：数据库编程">第八章：数据库编程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/" title="分类于 研究生复试">研究生复试</a>
+</div>
+
+    <span><a href="/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E8%8B%B1%E8%AF%AD%E9%97%AE%E9%A2%98/" title="英语问题">英语问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 java">java</a>
+</div>
+
+    <span><a href="/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/" title="JDK与JRE的区别">JDK与JRE的区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 java">java</a>
+</div>
+
+    <span><a href="/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/" title="Spring简介">Spring简介</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ashgen @ 米花町2丁目21番地</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">22k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">20 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/12/数据库/第十一章并发控制/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

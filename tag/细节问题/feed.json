@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "寻找未曾见过的你 • All posts by \"细节问题\" tag",
+    "description": "吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。",
+    "home_page_url": "https://ashgen.gitee.io",
+    "items": [
+        {
+            "id": "https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/",
+            "url": "https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/",
+            "title": "C++问题",
+            "date_published": "2023-03-04T03:24:00.000Z",
+            "content_html": "<p>使用范围 for 语句时，变量需定义在内部</p>\n<pre><code class=\"language-c++\">for(auto c : line)\n\t\tc=toupper(c);\n</code></pre>\n<h1 id=\"字符串转整数\"><a class=\"markdownIt-Anchor\" href=\"#字符串转整数\">#</a> 字符串转整数</h1>\n<pre><code class=\"language-C++\">string s=&quot;123&quot;;\nstringstream ss;\nint x=0;\nss&lt;&lt;s;\nss&gt;&gt;x;\ncout&lt;&lt;x+1&lt;&lt;endl;\n</code></pre>\n<h1 id=\"整数转字符串\"><a class=\"markdownIt-Anchor\" href=\"#整数转字符串\">#</a> 整数转字符串</h1>\n<pre><code class=\"language-c++\">int s=123;\nstringstream ss;\nstring x;\nss&lt;&lt;s;\nss&gt;&gt;x;\ncout&lt;&lt;x&lt;&lt;endl;\nreturn 0;\n</code></pre>\n",
+            "tags": [
+                "细节问题"
+            ]
+        },
+        {
+            "id": "https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/",
+            "url": "https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/",
+            "title": "C语言问题",
+            "date_published": "2023-02-28T09:00:00.000Z",
+            "content_html": "<h1 id=\"数组名取地址a\"><a class=\"markdownIt-Anchor\" href=\"#数组名取地址a\">#</a> 数组名取地址 &amp; a</h1>\n<p>a 是一个数组名，对于一个普通的变量 b，&amp;b 是指用取地址符号取得变量 b 的存放地址；a 在内存中没有分配空间，只对数组 a 的各个元素分配了存储空间，此处数组名字 a 显然不是普通的变量，&amp;a 也不代表所取 a 的存储地址。</p>\n<p><strong>&amp;a 在数值上等于 &amp; a [0]，也等于 a。<strong>此时，&amp;a 数值上等于整个数组的起始位置地址，含义上代表整个数组所占内存的大小，因为它的</strong>进阶单位是整个数组的字节长度</strong>，（&amp;a + 1）等于的是数组结束之后的下一段的起始位置地址。</p>\n",
+            "tags": [
+                "细节问题"
+            ]
+        }
+    ]
+}

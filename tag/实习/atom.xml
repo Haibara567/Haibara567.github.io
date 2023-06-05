@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ashgen.gitee.io</id>
+    <title>寻找未曾见过的你 • Posts by &#34;实习&#34; tag</title>
+    <link href="https://ashgen.gitee.io" />
+    <updated>2023-02-24T12:46:25.000Z</updated>
+    <category term="XXX" />
+    <category term="细节问题" />
+    <category term="java" />
+    <category term="3d建模" />
+    <category term="环境" />
+    <category term="博客" />
+    <category term="区块链" />
+    <category term="实习" />
+    <category term="数据库" />
+    <category term="玩" />
+    <category term="网址" />
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</id>
+        <title>实习面试问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;如何判断一个链表有无环&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何判断一个链表有无环&#34;&gt;#&lt;/a&gt; 如何判断一个链表有无环&lt;/h1&gt;
+&lt;h1 id=&#34;二叉树的遍历方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二叉树的遍历方式&#34;&gt;#&lt;/a&gt; 二叉树的遍历方式&lt;/h1&gt;
+&lt;h1 id=&#34;快速排序与冒泡排序的比较&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速排序与冒泡排序的比较&#34;&gt;#&lt;/a&gt; 快速排序与冒泡排序的比较&lt;/h1&gt;
+</content>
+        <category term="实习" />
+        <updated>2023-02-24T12:46:25.000Z</updated>
+    </entry>
+</feed>

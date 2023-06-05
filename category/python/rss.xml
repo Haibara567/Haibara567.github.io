@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>寻找未曾见过的你 • Posts by &#34;python&#34; category</title>
+        <link>https://ashgen.gitee.io</link>
+        <description>吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 27 Feb 2023 21:46:25 +0800</pubDate>
+        <lastBuildDate>Mon, 27 Feb 2023 21:46:25 +0800</lastBuildDate>
+        <category>XXX</category>
+        <category>细节问题</category>
+        <category>java</category>
+        <category>3d建模</category>
+        <category>环境</category>
+        <category>博客</category>
+        <category>区块链</category>
+        <category>实习</category>
+        <category>数据库</category>
+        <category>玩</category>
+        <category>网址</category>
+        <item>
+            <guid isPermalink="true">https://ashgen.gitee.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/</guid>
+            <title>python环境配置</title>
+            <link>https://ashgen.gitee.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/</link>
+            <category>环境</category>
+            <pubDate>Mon, 27 Feb 2023 21:46:25 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;anaconda装完后pip无法使用的问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#anaconda装完后pip无法使用的问题&#34;&gt;#&lt;/a&gt; anaconda 装完后，pip 无法使用的问题&lt;/h1&gt;
+&lt;p&gt;系统的环境变量的 path 中，&lt;/p&gt;
+&lt;p&gt;D:Anaconda3&lt;/p&gt;
+&lt;p&gt;D:Anaconda3\Library\bin&lt;/p&gt;
+&lt;p&gt;D:Anaconda3\Scripts&lt;/p&gt;
+&lt;p&gt;均要添加&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

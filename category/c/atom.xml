@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ashgen.gitee.io</id>
+    <title>寻找未曾见过的你 • Posts by &#34;c&#34; category</title>
+    <link href="https://ashgen.gitee.io" />
+    <updated>2023-03-17T08:18:25.000Z</updated>
+    <category term="XXX" />
+    <category term="细节问题" />
+    <category term="java" />
+    <category term="3d建模" />
+    <category term="环境" />
+    <category term="博客" />
+    <category term="区块链" />
+    <category term="实习" />
+    <category term="数据库" />
+    <category term="玩" />
+    <category term="网址" />
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/</id>
+        <title>C++实用函数</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+        <content type="html">&lt;h1 id=&#34;strtok&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#strtok&#34;&gt;#&lt;/a&gt; strtok()&lt;/h1&gt;
+&lt;h2 id=&#34;描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#描述&#34;&gt;#&lt;/a&gt; 描述&lt;/h2&gt;
+&lt;p&gt;C 库函数 &lt;strong&gt;char *strtok(char *str, const char *delim)&lt;/strong&gt; 分解字符串 &lt;strong&gt;str&lt;/strong&gt; 为一组字符串，&lt;strong&gt;delim&lt;/strong&gt; 为分隔符。&lt;/p&gt;
+&lt;h2 id=&#34;声明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#声明&#34;&gt;#&lt;/a&gt; 声明&lt;/h2&gt;
+&lt;p&gt;下面是 strtok () 函数的声明。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;char *strtok(char *str, const char *delim)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;参数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参数&#34;&gt;#&lt;/a&gt; 参数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;str&lt;/strong&gt; – 要被分解成一组小字符串的字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;delim&lt;/strong&gt; – 包含分隔符的 C 字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;返回值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#返回值&#34;&gt;#&lt;/a&gt; 返回值&lt;/h2&gt;
+&lt;p&gt;该函数返回被分解的第一个子字符串，如果没有可检索的字符串，则返回一个空指针。&lt;/p&gt;
+&lt;h2 id=&#34;实例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实例&#34;&gt;#&lt;/a&gt; 实例&lt;/h2&gt;
+&lt;p&gt;下面的实例演示了 strtok () 函数的用法。&lt;/p&gt;
+&lt;h2 id=&#34;实例-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实例-2&#34;&gt;#&lt;/a&gt; 实例&lt;/h2&gt;
+&lt;figure class=&#34;highlight c&#34;&gt;&lt;figcaption data-lang=&#34;c&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&amp;lt;string.h&gt;&lt;/span&gt; &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&amp;lt;stdio.h&gt;&lt;/span&gt;  &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; str&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;This is - www.runoob.com - website&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; s&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;-&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;token&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;      &lt;span class=&#34;token comment&#34;&gt;/* 获取第一个子字符串 */&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    token &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;strtok&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;str&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; s&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;      &lt;span class=&#34;token comment&#34;&gt;/* 继续获取其他的子字符串 */&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; token &lt;span class=&#34;token operator&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;token constant&#34;&gt;NULL&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;      &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;%s\n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; token &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;          &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        token &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;strtok&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; s&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;      &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;让我们编译并运行上面的程序，这将产生以下结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is 
+ www.runoob.com 
+ website
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;string中c_str-data-copypn函数的用法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#string中c_str-data-copypn函数的用法&#34;&gt;#&lt;/a&gt; string 中 c_str ()、data ()、copy (p,n) 函数的用法&lt;/h1&gt;
+&lt;p&gt;标准库的 string 类提供了 3 个成员函数来从一个 string 得到 c 类型的字符数组：c_str ()、data ()、copy (p,n)。&lt;/p&gt;
+&lt;h2 id=&#34;c_str生成一个const-char指针指向以空字符终止的数组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c_str生成一个const-char指针指向以空字符终止的数组&#34;&gt;#&lt;/a&gt; c_str ()：生成一个 const char * 指针，指向以空字符终止的数组。&lt;/h2&gt;
+&lt;p&gt;①这个数组的数据是临时的，当有一个改变这些数据的成员函数被调用后，其中的数据就会失效。因此要么现用先转换，要么把它的数据复制到用户自己可以管理的内存中。注意。看下例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;const char* c;
+string s=&amp;quot;1234&amp;quot;;
+c = s.c_str(); 
+cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl; //输出：1234
+s=&amp;quot;abcd&amp;quot;;
+cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl; //输出：abcd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面如果继续用 c 指针的话，导致的错误将是不可想象的。就如：1234 变为 abcd&lt;/p&gt;
+&lt;p&gt;其实上面的 c = s.c_str (); 不是一个好习惯。既然 c 指针指向的内容容易失效，我们就应该按照上面的方法，那怎么把数据复制出来呢？这就要用到 strcpy 等函数（推荐）。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;//const char* c; //①
+//char* c;       //②
+//char c[20]; 
+char* c=new char[20];
+string s=&amp;quot;1234&amp;quot;;
+//c = s.c_str(); 
+strcpy(c,s.c_str());
+cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl; //输出：1234
+s=&amp;quot;abcd&amp;quot;;
+cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl; //输出：1234
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：不能再像上面一样①所示了，const 还怎么向里面写入值啊；也不能②所示，使用了未初始化的局部变量 “c”，运行会出错的 。&lt;/p&gt;
+&lt;p&gt;② c_str () 返回一个客户程序可读不可改的指向字符数组的指针，不需要手动释放或删除这个指针。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;data (): 与 c_str () 类似，但是返回的数组不以空字符终止。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;sort&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sort&#34;&gt;#&lt;/a&gt; sort()&lt;/h1&gt;
+&lt;p&gt;对指定范围内元素进行快速排序&lt;/p&gt;
+&lt;p&gt;sort 是 STL 自带的系统函数，它的格式是：&lt;/p&gt;
+&lt;p&gt;void sort (要排序元素的起始地址，要排序元素的结束地址，比较函数)；&lt;/p&gt;
+&lt;p&gt;这里可以省略比较函数，他是默认从小到大排序的（升序排序）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;algorithm&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+int main()
+&amp;#123;
+	int a[]=&amp;#123;3,5,2,6,9,3,5&amp;#125;;
+	sort(a,a+7);//7是数组的元素个数，这里a为数组的开头，a+7就等于排序到数组的第七个元素
+	for(int i=0;i&amp;lt;6;i++)
+		cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;quot; &amp;quot;;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出:&lt;/p&gt;
+&lt;p&gt;2 3 3 5 5 6&lt;/p&gt;
+&lt;p&gt;void sort (要排序元素的起始地址，要排序元素的结束地址，比较函数)；&lt;/p&gt;
+&lt;p&gt;这个比较函数的作用就是可以自定义排序方式，比如降序排序。&lt;/p&gt;
+&lt;p&gt;定义：bool cmp (int x,int y)…，如果返回 True 那么 x 就排在 y 前面。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;algorithm&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+bool cmp(int x,int y)
+&amp;#123;
+	if(x&amp;gt;y)return true;//降序
+	return false;
+&amp;#125;
+int main()
+&amp;#123;
+	int a[]=&amp;#123;3,5,2,6,9,3,5&amp;#125;;
+	sort(a,a+7,cmp);//7是数组的元素个数
+	for(int i=0;i&amp;lt;6;i++)
+		cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;quot; &amp;quot;;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;p&gt;9 6 5 5 3 3&lt;/p&gt;
+&lt;h1 id=&#34;map&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map&#34;&gt;#&lt;/a&gt; Map&lt;/h1&gt;
+&lt;p&gt;map 是 STL 的一个关联容器，它提供一对一的 hash。&lt;/p&gt;
+&lt;p&gt;第一个可以称为关键字 (key)，每个关键字只能在 map 中出现一次；&lt;br&gt;
+第二个可能称为该关键字的值 (value)；&lt;br&gt;
+定义：&lt;br&gt;
+map &amp;lt;类型，类型&amp;gt; m;&lt;br&gt;
+ 举个栗子:&lt;br&gt;
+ 记录每个人的名字的对应的爱好，张三喜欢吃汉堡：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;map&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+int main()
+&amp;#123;
+	map&amp;lt;string,string&amp;gt; m;
+	m[&amp;quot;张三&amp;quot;]=&amp;quot;吃汉堡&amp;quot;;
+	cout&amp;lt;&amp;lt;&amp;quot;张三: &amp;quot;&amp;lt;&amp;lt;m[&amp;quot;张三&amp;quot;]; 
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;p&gt;张三：吃汉堡&lt;/p&gt;
+&lt;h1 id=&#34;stack栈&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#stack栈&#34;&gt;#&lt;/a&gt; stack (栈)&lt;/h1&gt;
+&lt;p&gt;头文件:&lt;/p&gt;
+&lt;p&gt;#include&lt;stack&gt;&lt;br&gt;
+stack 好像还有个翻译叫 “咸鱼”… 嘿嘿。&lt;/stack&gt;&lt;/p&gt;
+&lt;p&gt;栈的介绍：&lt;br&gt;
+栈就像一个盒子，可以放入或去除元素，但是个人类都知道，要把盒子底下的东西取出来，就必须先取出他上面的东西。&lt;/p&gt;
+&lt;p&gt;假如我们把 1、2、3、4、5 按顺序分别入栈：&lt;/p&gt;
+&lt;p&gt;栈的定义：&lt;br&gt;
+stack &amp;lt;类型 (可以不写)&amp;gt; st;&lt;br&gt;
+ 或者 stack st;&lt;br&gt;
+ 很 easy 是不？&lt;/p&gt;
+&lt;p&gt;栈的成员函数：&lt;br&gt;
+.empty ()	判断栈是否为空，空则返回 true&lt;br&gt;
+.pop ()	移除栈顶元素&lt;br&gt;
+.push (啥啥啥)	在栈顶增加元素&lt;br&gt;
+.size ()	返回栈中元素数目&lt;br&gt;
+.top ()	返回栈顶元素&lt;br&gt;
+.empty ()  判断栈是否为空。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;stack st;
+if(st.empty())//如果是空那么执行下面代码
+    ......
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;.push (啥啥啥), 在栈顶增加元素。&lt;/p&gt;
+&lt;p&gt;.top ()，返回栈顶元素，记住是返回，要单独输出。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;stack&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+stack&amp;lt;int&amp;gt; st;
+int main()&amp;#123;
+    st.push(5418);
+    cout&amp;lt;&amp;lt;st.top();//输出栈顶元素
+    return 0;
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 5418。&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;.size (), 返回栈中元素数目。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;stack&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+stack&amp;lt;int&amp;gt; st;
+int main()&amp;#123;
+    st.push(5418);
+    cout&amp;lt;&amp;lt;st.size();
+    return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 1&lt;/p&gt;
+&lt;p&gt;.pop ()，移除栈顶元素：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;stack&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+stack&amp;lt;int&amp;gt; st;
+int main()&amp;#123;
+    
+
+    st.push(1452);
+    st.push(5418);
+    st.pop();
+    cout&amp;lt;&amp;lt;st.top();
+    
+    return 0;
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 1452。&lt;/p&gt;
+&lt;p&gt;简单不？&lt;/p&gt;
+&lt;h1 id=&#34;二分查找&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二分查找&#34;&gt;#&lt;/a&gt; 二分查找&lt;/h1&gt;
+&lt;p&gt;头文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;algorithm&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;美妙的函数：&lt;/p&gt;
+&lt;h2 id=&#34;1lower_bound函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1lower_bound函数&#34;&gt;#&lt;/a&gt; 1.lower_bound 函数&lt;/h2&gt;
+&lt;p&gt;对于有序容器，有序容器，有序容器（重要的事情说三遍）快速二分查找出第一个大于等于&lt;/p&gt;
+&lt;p&gt;指定数的位置（下标），如果没有找到，返回最后一个数据后面的位置。&lt;/p&gt;
+&lt;p&gt;对于数组，通常的格式为：&lt;/p&gt;
+&lt;p&gt;查找的数组下标 = lower_bound (数组要查找的开始位置，数组要查找的结束位置后面，要找的数) – 数组开始位置 (一般写数组名);&lt;/p&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;algorithm&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+
+using namespace std;
+
+int main() &amp;#123;
+
+    int a[5] = &amp;#123; 1,2,3,3,8 &amp;#125;;
+     
+    //从 a 数组中找到第一个不小于   3 的元素
+     
+    int   index = lower_bound(a, a + 5, 3)-a;//查找的数组下标 = lower_bound(数组要查找的开始位置，数组要查找的结束位置后面，要找的数) – 数组开始位置;
+     
+    if   (index==5 ) cout &amp;lt;&amp;lt; &amp;quot; not found! &amp;quot;;//index=5，也就是数组末尾的位置。
+    else  cout &amp;lt;&amp;lt; index;
+     
+    return   0;
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 2。&lt;/p&gt;
+&lt;h2 id=&#34;2upper_bound函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2upper_bound函数&#34;&gt;#&lt;/a&gt; 2.upper_bound 函数&lt;/h2&gt;
+&lt;p&gt;有一个类似 lower_bound 的函数 upper_bound, 快速二分查找出第一个大于指定数的位置（下&lt;/p&gt;
+&lt;p&gt;标），如果没有找到，返回最后一个数据后面的位置。&lt;/p&gt;
+&lt;p&gt;举个栗子，啊… 快没栗子了。(っ °Д °;) っ&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;algorithm&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+
+using namespace std;
+
+int main() &amp;#123;
+
+    int a[5] = &amp;#123; 1,2,3,3,8 &amp;#125;;
+    //从 a 数组中找到第一个大于 3 的元素
+     
+    int   index = upper_bound(a, a + 5, 3)-a;
+     
+    if   (index==5 ) cout &amp;lt;&amp;lt; &amp;quot; not found! &amp;quot;;
+    else cout &amp;lt;&amp;lt; index;
+     
+    return   0;
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 4.&lt;/p&gt;
+&lt;h2 id=&#34;3binary_search查找数组内某个元素是否出现&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3binary_search查找数组内某个元素是否出现&#34;&gt;#&lt;/a&gt; 3.binary_search：查找数组内某个元素是否出现。&lt;/h2&gt;
+&lt;p&gt;void binary_search (数组首地址，结束地址，要查找的数)&lt;/p&gt;
+&lt;p&gt;返回值为 bool 类型，找到了返回 true。&lt;/p&gt;
+</content>
+        <category term="XXX" />
+        <updated>2023-03-17T08:18:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/</id>
+        <title>C++问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;p&gt;使用范围 for 语句时，变量需定义在内部&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;for(auto c : line)
+		c=toupper(c);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;字符串转整数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串转整数&#34;&gt;#&lt;/a&gt; 字符串转整数&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;string s=&amp;quot;123&amp;quot;;
+stringstream ss;
+int x=0;
+ss&amp;lt;&amp;lt;s;
+ss&amp;gt;&amp;gt;x;
+cout&amp;lt;&amp;lt;x+1&amp;lt;&amp;lt;endl;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;整数转字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#整数转字符串&#34;&gt;#&lt;/a&gt; 整数转字符串&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;int s=123;
+stringstream ss;
+string x;
+ss&amp;lt;&amp;lt;s;
+ss&amp;gt;&amp;gt;x;
+cout&amp;lt;&amp;lt;x&amp;lt;&amp;lt;endl;
+return 0;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="细节问题" />
+        <updated>2023-03-04T03:24:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/</id>
+        <title>C语言问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;数组名取地址a&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组名取地址a&#34;&gt;#&lt;/a&gt; 数组名取地址 &amp;amp; a&lt;/h1&gt;
+&lt;p&gt;a 是一个数组名，对于一个普通的变量 b，&amp;amp;b 是指用取地址符号取得变量 b 的存放地址；a 在内存中没有分配空间，只对数组 a 的各个元素分配了存储空间，此处数组名字 a 显然不是普通的变量，&amp;amp;a 也不代表所取 a 的存储地址。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;amp;a 在数值上等于 &amp;amp; a [0]，也等于 a。&lt;strong&gt;此时，&amp;amp;a 数值上等于整个数组的起始位置地址，含义上代表整个数组所占内存的大小，因为它的&lt;/strong&gt;进阶单位是整个数组的字节长度&lt;/strong&gt;，（&amp;amp;a + 1）等于的是数组结束之后的下一段的起始位置地址。&lt;/p&gt;
+</content>
+        <category term="细节问题" />
+        <updated>2023-02-28T09:00:00.000Z</updated>
+    </entry>
+</feed>

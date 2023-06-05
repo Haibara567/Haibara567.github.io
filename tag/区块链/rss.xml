@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>寻找未曾见过的你 • Posts by &#34;区块链&#34; tag</title>
+        <link>https://ashgen.gitee.io</link>
+        <description>吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 01 Mar 2023 10:31:25 +0800</pubDate>
+        <lastBuildDate>Wed, 01 Mar 2023 10:31:25 +0800</lastBuildDate>
+        <category>XXX</category>
+        <category>细节问题</category>
+        <category>java</category>
+        <category>3d建模</category>
+        <category>环境</category>
+        <category>博客</category>
+        <category>区块链</category>
+        <category>实习</category>
+        <category>数据库</category>
+        <category>玩</category>
+        <category>网址</category>
+        <item>
+            <guid isPermalink="true">https://ashgen.gitee.io/2023/03/01/%E5%8C%BA%E5%9D%97%E9%93%BE/Hyperledger%20Fabric%E8%81%94%E7%9B%9F%E9%93%BE%E7%AE%80%E4%BB%8B/</guid>
+            <title>联盟链简介</title>
+            <link>https://ashgen.gitee.io/2023/03/01/%E5%8C%BA%E5%9D%97%E9%93%BE/Hyperledger%20Fabric%E8%81%94%E7%9B%9F%E9%93%BE%E7%AE%80%E4%BB%8B/</link>
+            <category>区块链</category>
+            <pubDate>Wed, 01 Mar 2023 10:31:25 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC85MTQzMTg4NQ==&#34;&gt;区块链交易原理&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC84OTMzMzQwMg==&#34;&gt;公有链、私有链、联盟链的区别&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21hb3FpdWtlamkvYXJ0aWNsZS9kZXRhaWxzLzExOTcyOTM3NQ==&#34;&gt;许可区块链与无许可区块链&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oeXBlcmxlZGdlci1mYWJyaWMucmVhZHRoZWRvY3MuaW8vemhfQ04vbGF0ZXN0L2luZGV4Lmh0bWw=&#34;&gt;Hyperledger Fabric 文档&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;什么是挖矿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是挖矿&#34;&gt;#&lt;/a&gt; 什么是挖矿&lt;/h1&gt;
+&lt;p&gt;传统商品的供应链，大家都比较熟悉，简单划分就是：生产 —— 交易 —— 使用。作为一般等价物的比特币，也存在着这 3 个环节：生产 —— 交易 —— 应用。了解了比特币的生产环节，也明白了什么叫做 “挖矿”。&lt;/p&gt;
+&lt;p&gt;区块链的本质，是一个分布式的公共账本，是一个记账系统，每一个参与的点，都可以在上边记账。虽然每一个参与的点都有记账的权利，但是这个账到底怎么一个计法？谁来记？怎么记？&lt;/p&gt;
+&lt;p&gt;比特币采用了一种叫做 PoW 工作量证明的机制。大概意思是说，每个节点都想记账，那么到底由哪个节点来记呢？计算能力最强大的那一个记喽。&lt;/p&gt;
+&lt;p&gt;谁的计算能力最强大呢？那就得比一比了，怎么比？数学竞赛！系统每次会出一道数学题，只有最快解出这道题目的计算机才能进行记账。获得了这个记账权的计算机，同时获得一个单位的比特币奖励。&lt;/p&gt;
+&lt;p&gt;“一个单位” 到底是多少？这得从比特币的分配机制说起。比特币是模拟黄金的储量和发行速度的。在储量上，比特别是限量发行的，总量有且只有 2100 万枚。在发行速度上，比特币有个 “减半机制”，每产生 21 万个区块（几乎是每 4 年），就进行一次减半：最开始获得一次记账权，奖励 50 个比特币；2012 年 12 月 28 日，比特币迎来第一次减半，获得一次记账权，奖励只有 25 个比特币；2016 年 7 月 9 日，比特别迎来第二次减半，获得一次记账权，奖励只有 12.5 个比特币了。&lt;/p&gt;
+&lt;p&gt;比特币既然模拟黄金，那获得比特币也就被叫做 “挖矿” 了。挖矿，就是计算机们参与到数据竞赛中，并获得比特币奖励的过程。挖矿的人，就叫做矿工。&lt;/p&gt;
+&lt;p&gt;最开始算力竞争不激烈的时候，大家在家里或者办公室里，用 CPU 挖矿，然后用 1 万枚比特币买了俩披萨那个哥们儿，开创了用 GPU 挖矿，这股风潮一度带动了 GPU 断货。&lt;/p&gt;
+&lt;p&gt;但是挖着挖着，竞争越来越激烈，大家发现 GPU 算力也跟不上了。于是就有了专门的矿机。矿机就是专门用来挖币的电脑，搭载有专业的挖矿晶元，多采用烧显卡的方式工作。矿机有两个缺点：一是产生较大噪音 —— 这也是为什么家庭挖矿不太可行；二是耗电量较大，有网友一台挖矿机 3 个月就用 1000 多度电，这么高的电费，很有可能把挖矿赚的钱抵消，或倒贴赔钱。&lt;/p&gt;
+&lt;p&gt;单个矿机作战力还是跟不上，然后就有了矿场和矿池。&lt;/p&gt;
+&lt;p&gt;“矿场” 就是把矿机放到一起，集中管理。早期特别粗放，就是弄个架子，把矿机挨个摞到架子上就可以了，后来发现这样会导致矿机损耗，就开始有了通风、隔尘、室内温度湿度等要求。矿场一般建立在电费比较便宜，比较稳定的地方，比如内蒙、四川。得益于中国完善的电力基础设施建设、廉价的火电水电或风电资源，中国力量也一直垄断着比特币矿场。&lt;/p&gt;
+&lt;p&gt;“矿池” 则是突破了地理位置的限制 —— 多人合作挖矿，将少量算力合并、联合运作，使用这种方式建立的网站便被称作矿池。&lt;/p&gt;
+&lt;h1 id=&#34;联盟链&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#联盟链&#34;&gt;#&lt;/a&gt; 联盟链&lt;/h1&gt;
+&lt;h2 id=&#34;1-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-简介&#34;&gt;#&lt;/a&gt; 1. 简介&lt;/h2&gt;
+&lt;p&gt;区块链作为一种分布式账本技术，主要分为许可链和非许可链。其中许可链又分为私有链和联盟链。和 BTC 或 ETH 不同，联盟链是一种需要身份认证的区块链。只有通过认证的节点或组织才能参与联盟链网络中的交易。&lt;/p&gt;
+&lt;h2 id=&#34;2-hyperledger-fabric&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-hyperledger-fabric&#34;&gt;#&lt;/a&gt; 2. Hyperledger fabric&lt;/h2&gt;
+&lt;p&gt;Hyperledger fabric 是一种联盟链。fabric 网络中的成员都需要在可信赖的成员服务提供者处注册，否则不能参与交易。/&lt;em&gt; 因此围绕联盟链产生了一些争议，一些人认为以 fabric 为代表的联盟链并不是真正的区块链，而另一些人则持反对意见。&lt;/em&gt;/&lt;/p&gt;
+&lt;p&gt;fabric 有一个特有的功能，通道（channel）。通道中的成员与通道外的成员的相互隔绝的，只有同一个通道的成员能够共享账本，不同通道的成员之间的交易记录是不可互相查询的。值得一提的是，同一个节点可以加入不同的通道。&lt;/p&gt;
+&lt;p&gt;fabric 的共识机制是可以拔插的。共识机制是一个分布式系统里的名词，就是在不同的系统中并保持副本的一致性。fabric 允许网络中的节点自行选择最能代表参与者需求的共识机制。&lt;/p&gt;
+&lt;p&gt;fabric 中的账本系统包括两个组件：世界状态（数据库）和交易日志（历史记录）。每个参与者都拥有他们所属的 fabric 网络的账本副本。世界状态描述了账本在给定时间点的状态。它是账本的数据库，记录了当前状态的所有交易，是世界状态的更新历史。交易日志是不可插拔的，它只记录区块链网络中使用账本数据库前后的值。&lt;/p&gt;
+&lt;h2 id=&#34;3-fabric的身份&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-fabric的身份&#34;&gt;#&lt;/a&gt; 3. Fabric 的身份&lt;/h2&gt;
+&lt;p&gt;身份是联盟链区别与公链的一个最重要特征。在公链中是没有身份这个概念的，每个节点都是相同的角色。而&lt;em&gt; fabric 身份是联盟链中最重要的概念，甚至可以没有之一&lt;/em&gt;。联盟链中的身份确定了对资源的确切权限以及对参与者在区块链网络中拥有的信息的访问权限。&lt;/p&gt;
+&lt;p&gt;整个网络中分为几种角色：peer 节点（提交节点和背书节点），证书颁发机构 CA，其中成员服务提供者（Membership Service Provider, MSP）是一个可信任的权威机构，它不是 fabric 中的角色，但是为 fabric 中的节点提供可信的身份认证。fabric 中，默认的 MSP 实现使用 X.509 证书（使用最广泛的证书结构标准，包括证书信息 / 签名算法 / 数字签名等内容）作为身份，采用公钥基础结构（Pubic Key Infrastructure, PKI）作为分层模型。PKI 是身份供应商，为接入区块链网络的用户提供一个身份列表，用户的身份只能在身份列表的包含范围内选择；而 MSP 是接受身份供应商，会提供一个列表来确定哪些身份是可信的成员（也就是参与者）。&lt;/p&gt;
+&lt;h2 id=&#34;4-公钥基础结构pubic-key-infrastructure-pki&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-公钥基础结构pubic-key-infrastructure-pki&#34;&gt;#&lt;/a&gt; 4. 公钥基础结构（Pubic Key Infrastructure, PKI）&lt;/h2&gt;
+&lt;p&gt;PKI 有四个关键要素：数字证书 / 公钥私钥 / 证书颁发机构和证书撤销列表：&lt;/p&gt;
+&lt;p&gt;数字证书包含了证书持有者（区块链网络参与者）的相关属性，其中最常见的证书类型就是 X.509 标准。最关键的是，证书持有者的公钥会在其证书中分发。数字签名可以验证消息的来源以及消息的完整性。&lt;/p&gt;
+&lt;p&gt;公钥私钥的作用是为了验证数字签名（如 Fig 1），这里用到了我们常说的非对称加密。密钥之间唯一的数学关系使得私钥在消息上的签名只有对应的公钥在相同的消息上才能匹配。参与者用私钥加密，而任何持有其公钥的用户都可以查看签名消息并验证签名。其中的公钥是每一个节点都可以使用的，用于充当授权锚；私钥被用在消息中产生数字签名。消息的接收者可以通过其所持有的发送者的公钥来验证数字签名的有效性，进而验证消息的来源和完整性。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://pic3.zhimg.com/80/v2-204c5b09ffdc82bf4612f31d7ee4be0a_1440w.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Fig 1 数字签名&lt;/p&gt;
+&lt;p&gt;证书颁发机构（Certificate Authority，CA）&lt;/p&gt;
+&lt;p&gt;CA 是一个区块链网络信任的权威机构，它可以向参与者或者节点颁发经过加密验证的数字证书。CA 向不同的参与者颁发证书，并对这些证书进行签名，将参与者的公钥绑定上去（可以选择包含参与者全部属性的列表）。区块链网络中的成员信任 CA（并知道 CA 的公钥），则可以信任经过 CA 认证的证书，并通过验证 CA 的签名来获得签名中包含的所有属性。数字证书可以作为信任锚，来验证不同参与者的消息。区块链网络中可以存在一个或多个 CA。&lt;/p&gt;
+&lt;p&gt;CA 分为根 CA 和中间 CA，它们构成了一条信任链。根 CA 能够给整个网络中的用户颁发证书，中间 CA 的证书直接或间接地由根 CA 颁发，可以有隐藏和保护根 CA 的作用。&lt;/p&gt;
+&lt;p&gt;Fabric CA 是一个内置的 CA 组建，用来给 fabric 网络充当根 CA，提供和管理证书。&lt;/p&gt;
+&lt;p&gt;证书吊销列表（Certificate Revocation Lists，CRL）是一个被吊销证书的黑名单，CRL 上的证书都将被视为无效。&lt;/p&gt;
+&lt;h2 id=&#34;5-成员服务提供者membership-service-provider-msp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5-成员服务提供者membership-service-provider-msp&#34;&gt;#&lt;/a&gt; 5. 成员服务提供者（Membership Service Provider， MSP）&lt;/h2&gt;
+&lt;p&gt;PKI 解决了 fabric 网络中身份发放的问题，但由于节点的私钥永远都不会公开，因此还需要引入一种可以证实身份的机制 MSP 。&lt;/p&gt;
+&lt;p&gt;MSP 是一组被添加在网络中的配置文件夹，被用来在外部和内部定义组织（organization）。CA 生成代表身份的证书，而 MSP 包含了被许可身份的列表。MSP 通过识别成员或向成员颁发身份的 CA，来确定是否接受它们作为信任域的成员。MSP 通过标志参与者在节点或通道中的特定权利，将身份转化为角色。&lt;strong&gt;简而言之，PKI（具体说是 CA）提供的是身份；而 MSP 提供的是角色&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;当用户使用 Fabric CA 注册时，其必须关联为管理员 /peer 节点 / 客户端 / 排序节点 / 成员其中之一的角色。MSP 根据作用范围的不同分为：本地 MSP 和通道 MSP。本地 MSP 为客户端 /peer 节点 / 排序节点定义，每一个节点都必须定义一个本地 MSP。通道 MSP 则在通道层面定义了管理权和参与权，在通道中分配成员的权限，每一个参与通道的组织都要为自己定义一个通道 MSP。&lt;/p&gt;
+&lt;p&gt;因此，MSP 是一种能使参与者加入联盟链的机制，想要在 Fabric 网络上进行交易需要：&lt;/p&gt;
+&lt;p&gt;1. 拥有一个 CA 颁发的身份；2. 成为一个被网络中的成员认可的组织成员（将成员的公钥添加到组织的 MSP 中即可）；3. 将 MSP 添加到一个网络中的联盟或通道中；4. 确保 MSP 包含在网络所定义的策略（Policy）中。&lt;/p&gt;
+&lt;h2 id=&#34;6-策略policy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6-策略policy&#34;&gt;#&lt;/a&gt; 6. 策略（Policy）&lt;/h2&gt;
+&lt;p&gt;在 Fabric 中，策略是基础设施的管理机制。它表示了成员如何同意或拒绝网络 / 通道 / 智能合约的更改。策略是在区块链网络最初配置时由联盟成员一致同意的，但在网络演化的过程中可以更改。简而言之，在区块链网络中的所有行为都要受到策略的控制。&lt;/p&gt;
+&lt;p&gt;策略是 Fabirc 区别于公链的内容之一。在公链中，交易可以在网络中的任意节点中生成和验证，但是 Fabric 是许可链的一种，因此策略决定了哪些组织可以访问或更新 Fabric 网络，并且提供了强制执行这些决策的机制。从这个角度看，我认为 Fabric 的可监管性更强。&lt;/p&gt;
+&lt;p&gt;策略在 Fabric 网络的不同层级中都有应用。至于具体应用和访问控制列表（Access Control List，ACL）就放在后面再学了，这部分我感觉更偏向与工程实践。&lt;/p&gt;
+&lt;p&gt;另外专门说两个我认为比较关键的策略：背书策略（Endorsement policy）定义了必须为执行提案背书的组织；修改策略（Modification policy）指定了任何配置更新所需要的一组身份，是更新策略的策略，每一个通道配置中都包含一个对修改策略的引用。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

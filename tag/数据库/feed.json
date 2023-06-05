@@ -1,0 +1,58 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "寻找未曾见过的你 • All posts by \"数据库\" tag",
+    "description": "吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。",
+    "home_page_url": "https://ashgen.gitee.io",
+    "items": [
+        {
+            "id": "https://ashgen.gitee.io/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA/",
+            "url": "https://ashgen.gitee.io/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA/",
+            "title": "第六章关系数据理论",
+            "date_published": "2023-03-17T08:19:25.000Z",
+            "content_html": "<p><strong>关系模式</strong>是对元组集合形式化的描述，R (U，D，Dom，F）</p>\n<p>其中 R 为关系名，U 为属性集，D 为属性来自的域，Dom 为属性向域的映象集合，F 为属性间数据的赖关系集合。简写成: R&lt;U，F&gt;。关系模式是静态的，关系是动态的，不同时刻模式中的关系可能不同，但必须满足模式中 F 所指定的完整性约束条件。</p>\n",
+            "tags": [
+                "数据库"
+            ]
+        },
+        {
+            "id": "https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/",
+            "url": "https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/",
+            "title": "第八章：数据库编程",
+            "date_published": "2023-03-12T12:23:25.000Z",
+            "content_html": "<p><strong>终端交互方式下使用一一交互式 SQL</strong><br>\n<strong> 嵌入在高级语言中使用一一嵌入式 SQL</strong></p>\n<h1 id=\"嵌入式sql\"><a class=\"markdownIt-Anchor\" href=\"#嵌入式sql\">#</a> 嵌入式 SQL</h1>\n<h2 id=\"实现方法\"><a class=\"markdownIt-Anchor\" href=\"#实现方法\">#</a> 实现方法</h2>\n<ol>\n<li>\n<p>扩充宿主语言（C 语言、PASCAL 语言等高级语言）编译程序，使之支持 SQL</p>\n</li>\n<li>\n<p>将嵌入 SQL 的宿主语言转化为预处理程序</p>\n</li>\n</ol>\n<h1 id=\"游标\"><a class=\"markdownIt-Anchor\" href=\"#游标\">#</a> 游标</h1>\n<p>SQL 一次处理一组记录，主语言一次处理一个记录。游标是一个数据缓冲区，存放 SQL 的查询结果，等待主变量取用。</p>\n<h1 id=\"存储过程\"><a class=\"markdownIt-Anchor\" href=\"#存储过程\">#</a> <strong>存储过程</strong></h1>\n<p>类似 C 语言中的函数，包含数据操纵语句、变量、逻辑控制语句等。</p>\n<p><strong>系统存储过程</strong>：以 sp 开头，用来进行系统的各项设定，取得信息，相关管理工作。</p>\n<p>sp_help 就是取得指定对象的相关信息。</p>\n<p><strong>扩展存储过程</strong>：以 xp 开头，用来调用操作系统提供的功能。<br>\nexec master…xp cmdshe11 ‘ping 10.8.16.1’</p>\n<p><strong>用户自定义的存储过程</strong>：由用户在自己的数据库中创建的存储过程，类似 C 语言中的用户自定义函数</p>\n",
+            "tags": [
+                "数据库"
+            ]
+        },
+        {
+            "id": "https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/",
+            "url": "https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/",
+            "title": "第十一章：并发控制",
+            "date_published": "2023-03-12T12:16:25.000Z",
+            "content_html": "<h1 id=\"并发的好处\"><a class=\"markdownIt-Anchor\" href=\"#并发的好处\">#</a> 并发的好处</h1>\n<ol>\n<li>改善系统资源利用率</li>\n<li>改善短事务的响应时间</li>\n</ol>\n<h1 id=\"并发的坏处\"><a class=\"markdownIt-Anchor\" href=\"#并发的坏处\">#</a> 并发的坏处</h1>\n<ol>\n<li>\n<p>丢失修改</p>\n<p>事务 A 和 B 读入同一数据并修改，B 提交的结果破坏了 A 提交的</p>\n</li>\n<li>\n<p>不可重复读</p>\n<p>A 读取后，B 修改，A 再读就不一样了</p>\n</li>\n<li>\n<p>读脏数据</p>\n<p>A 修改后，B 读，A 被撤销，B 读到的数据就是脏数据</p>\n</li>\n</ol>\n<h1 id=\"加锁\"><a class=\"markdownIt-Anchor\" href=\"#加锁\">#</a> 加锁</h1>\n<p>几个事务的并行执行是正确的，当且仅当其结果与按某一个次序串行执行事务的结果相同</p>\n<p>排他锁（写锁，X 锁），加上后不能再加其他任何锁</p>\n<p>共享锁（读锁，S 锁），加上后可以再加 S 锁</p>\n<p><strong>一级封锁协议</strong>：事务在修改数据之前必须加 X 锁，事务结束时释放，可防止丢失修改</p>\n<p><strong>二级封锁协议</strong>：一级协议的基础上加上事务在读取数据之前必须加 S 锁，<strong>读完释放</strong>，可防止读脏数据</p>\n<p><strong>三级封锁协议</strong>：一级协议的基础上加上事务在读取数据之前必须加 S 锁，<strong>事务结束时释放</strong>，保证可重复读</p>\n<p><strong>活锁</strong>：某个事务永远处于等待状态，解决方法：先来先服务</p>\n<p><strong>死锁</strong>：多个事务都在等待另一个解除封锁，解决方法：死锁预防、死锁检测</p>\n<p>若一个并行调度的结果等价于某个串行调度的结果，则该并行调度称为<strong>可串行化的调度</strong></p>\n<h1 id=\"两段锁协议\"><a class=\"markdownIt-Anchor\" href=\"#两段锁协议\">#</a> 两段锁协议</h1>\n<p>在对任何数据进行读、写之前，事务必须首先获得该数据的封锁。在释放一个封锁后，事务不得再获得任何其他封锁。即将事务分为两个阶段，第一为获得封锁，第二为释放封锁。</p>\n<p>遵循两段锁协议仍可能死锁。</p>\n<p>对任何一个事务而言，在调度中获得其最后一个锁的时刻，称为该事务的<strong>封锁点</strong>。</p>\n",
+            "tags": [
+                "数据库"
+            ]
+        },
+        {
+            "id": "https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF/",
+            "url": "https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF/",
+            "title": "第十章：数据库系统概述",
+            "date_published": "2023-03-12T12:15:25.000Z",
+            "content_html": "<p><strong>事务</strong>即数据库操作序列，是一个不可分割的工作单位。是恢复和并发控制的基本单位</p>\n<p><strong>事物的 ACID 特性</strong>：<br>\n（1）原子性 (Atomicity)：事务被视为不可分割的最小单元，事务的所有操作要么全部提交成<br>\n功，要么全部失败回滚。回滚可以用回滚日志来实现，回滚日志记录着事务所执行的修改操作，<br>\n在回滚时反向执行这些修改操作即可。<br>\n（2）一致性 (Consistency)：数据库在事务执行前后都保持一致性状态。在一致性状态下，所有<br>\n事务对一个数据的读取结果都是相同的。<br>\n（3）隔离性 (Isolation)：一个事务所做的修改在最终提交以前，对其它事务是不可见的。<br>\n（4）持久性 (Durability)：一旦事务提交，则其所做的修改将会永远保存到数据库中。即使系统<br>\n发生崩溃，事务执行的结果也不能丢失。</p>\n<h1 id=\"故障分类\"><a class=\"markdownIt-Anchor\" href=\"#故障分类\">#</a> 故障分类</h1>\n<ol>\n<li>\n<p>事务内部故障</p>\n<p>恢复操作是<strong>事务撤销</strong></p>\n</li>\n<li>\n<p>系统故障（软故障）</p>\n</li>\n<li>\n<p>介质故障（硬故障）</p>\n</li>\n<li>\n<p>计算机病毒</p>\n</li>\n</ol>\n<h1 id=\"数据转储分类\"><a class=\"markdownIt-Anchor\" href=\"#数据转储分类\">#</a> 数据转储分类</h1>\n<table>\n<thead>\n<tr>\n<th></th>\n<th><strong>动态转储</strong></th>\n<th><strong>静态转储</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>海量转储</strong></td>\n<td>动态海量转储</td>\n<td>静态海量转储</td>\n</tr>\n<tr>\n<td><strong>增量转储</strong></td>\n<td>动态增量转储</td>\n<td>静态增量转储</td>\n</tr>\n</tbody>\n</table>\n<h1 id=\"日志文件\"><a class=\"markdownIt-Anchor\" href=\"#日志文件\">#</a> 日志文件</h1>\n<p>记录事务对数据库的更新操作</p>\n",
+            "tags": [
+                "数据库"
+            ]
+        },
+        {
+            "id": "https://ashgen.gitee.io/2023/03/06/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%AA%E8%AE%BA/",
+            "url": "https://ashgen.gitee.io/2023/03/06/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%AA%E8%AE%BA/",
+            "title": "第一章：数据库系统概述",
+            "date_published": "2023-03-06T10:46:25.000Z",
+            "content_html": "<h1 id=\"基本概念\"><a class=\"markdownIt-Anchor\" href=\"#基本概念\">#</a> <strong>基本概念</strong></h1>\n<p>** 数据：** 数据是描述事物的符号记录，数据的含义称为数据的语义</p>\n<p>** 数据库：** 长期存储、有组织、可共享的大量数据集合</p>\n<p>** 数据库管理系统：** 和操作系统一样是计算机的基础软件</p>\n<p>** 数据库系统：** 由数据库、数据库管理系统、数据库管理员组成</p>\n<h1 id=\"技术的发展阶段\"><a class=\"markdownIt-Anchor\" href=\"#技术的发展阶段\">#</a> <strong>技术的发展阶段</strong></h1>\n<p>人工管理 —— 文件系统 —— 数据库系统</p>\n<h1 id=\"数据模型\"><a class=\"markdownIt-Anchor\" href=\"#数据模型\">#</a> <strong>数据模型</strong></h1>\n<p>是对现实世界数据特征的抽象</p>\n<p>![img](file:///C:/Users/admin/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)</p>\n<p>最常用<strong>实体 - 联系</strong>方法，即<strong> E-R 图</strong>来表示概念模型</p>\n<p>其中逻辑模型中的<strong>关系模型</strong>是重点</p>\n<h1 id=\"数据库系统的三级模式\"><a class=\"markdownIt-Anchor\" href=\"#数据库系统的三级模式\">#</a> 数据库系统的三级模式</h1>\n<p>数据按外模式的描述提供给用户。</p>\n<p>按内模式的描述存储在磁盘中。</p>\n<p>模式提供了连接这两级的相对稳定的中间观点，并使得两级中任何一级的改变不受另一级的牵制。</p>\n<p>** 外模式 / 模式映象：** 保证数据的逻辑独立性</p>\n<p>** 模式 / 内模式映象：** 保证数据的物理独立性</p>\n<p>![img](file:///C:/Users/admin/AppData/Local/Temp/msohtmlclip1/01/clip_image003.png)</p>\n<h1 id=\"数据库系统组成部分\"><a class=\"markdownIt-Anchor\" href=\"#数据库系统组成部分\">#</a> 数据库系统组成部分</h1>\n<p>硬件平台及数据库</p>\n<p>软件支持系统</p>\n<p>各类人员</p>\n",
+            "tags": [
+                "数据库"
+            ]
+        }
+    ]
+}

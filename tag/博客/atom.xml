@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ashgen.gitee.io</id>
+    <title>寻找未曾见过的你 • Posts by &#34;博客&#34; tag</title>
+    <link href="https://ashgen.gitee.io" />
+    <updated>2023-02-24T12:46:25.000Z</updated>
+    <category term="XXX" />
+    <category term="细节问题" />
+    <category term="java" />
+    <category term="3d建模" />
+    <category term="环境" />
+    <category term="博客" />
+    <category term="区块链" />
+    <category term="实习" />
+    <category term="数据库" />
+    <category term="玩" />
+    <category term="网址" />
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/24/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
+        <title>本站自身建设</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/24/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+        <content type="html">&lt;h1 id=&#34;写博客注意事项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#写博客注意事项&#34;&gt;#&lt;/a&gt; 写博客注意事项&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在博客的开头，使用 YAML Font Matter 包围以下文字&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;title: XXX&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;date: 2023/02/24 20:46:25 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;categories: &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- XXX &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;tags: &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- XXX&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;不能直接把网址放到文章中，要加超链接&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文章首页分类时，分类标题不能有字符，只能是英文和汉字&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;上传图片至本博客的图床中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#上传图片至本博客的图床中&#34;&gt;#&lt;/a&gt; 上传图片至本博客的图床中&lt;/h1&gt;
+&lt;p&gt;首先进入 https://smms.app/，&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/image-20230311173825147-16852626113381.png&#34; alt=&#34;image-20230311173825147&#34;&gt; 然后上传图片之后复制进 D:\myblog\themes\shoka_images.yml 文件中，按照上面格式添加即可。&lt;/p&gt;
+</content>
+        <category term="博客" />
+        <updated>2023-02-24T12:46:25.000Z</updated>
+    </entry>
+</feed>

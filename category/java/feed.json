@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "寻找未曾见过的你 • All posts by \"java\" category",
+    "description": "吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。",
+    "home_page_url": "https://ashgen.gitee.io",
+    "items": [
+        {
+            "id": "https://ashgen.gitee.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/",
+            "url": "https://ashgen.gitee.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/",
+            "title": "JDK与JRE的区别",
+            "date_published": "2023-03-26T12:46:25.000Z",
+            "content_html": "<p>JDK 和 JRE 是 Java 开发和运行工具，其中 JDK 包含了 JRE，但是 JRE 是可以独立安装的，它们在 Java 开发和运行的时候起到不同的作用</p>\n<h1 id=\"1jdk\"><a class=\"markdownIt-Anchor\" href=\"#1jdk\">#</a> 1.JDK</h1>\n<p>​    JDK 是 Java Development Kit 的缩写，是 Java 的开发工具包，主要包含了各种类库和工具，当然也包含了另外一个 JRE.。那么为什么要包含另外一个 JRE 呢？而且 &lt;JDK 安装目录&gt;/JRE/bin 目录下，包含有 server 一个文件夹～包含一个 jvm.dll，这说明 JDK 提供了一个虚拟机。</p>\n<p>​    另外，JDK 的 bin 目录下有各种 Java 程序需要用到的命令，与 JRE 的 bin 目录最明显的区别就是 JDK 文件下才有 javac，这一点很好理解，因为 JRE 只是一个运行环境而已，与开发无关。正因为如此，具备开发功能的 JDK 所包含的 JRE 下才会同时有 server 的 JVM，而仅仅作为运行环境的 JRE 下，只需要 server 的 jvm.dll 就够了。</p>\n<p>注意：JDK 所提供的运行环境和工具度需要进行环境变量的配置以后，才能使用，最主要的配置就是把 &lt;JDK 安装目录&gt;/bin 目录设置为 Path 环境变量值的一部分。</p>\n<h1 id=\"2jre\"><a class=\"markdownIt-Anchor\" href=\"#2jre\">#</a> 2.JRE</h1>\n<p>​    JRE 是 Java Runtime Environment 的缩写，是 Java 程序的运行环境。既然是运行，当然要包含 JVM，也就是所谓的 Java 虚拟机，还有所以的 Java 类库的 class 文件，都在 lib 目录下，并且都打包成了 jar。</p>\n<p>至于在 Windows 上的虚拟机是哪个文件呢？就是 &lt;JRE 安装目录&gt;/bin/server 中的 jvm.dll。</p>\n<p><img data-src=\"https://img-blog.csdn.net/20160807174832320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center\" alt=\"img\"></p>\n<p>另外，安装 JRE 的时候安装程序会自动把 JRE 的 java.exe 添加到了系统变量中。系统变量 Path 的最前面有 % SystemRoot% system32;% SystemRoot%; 这样的配置，那样到 Windows/system32 目录下 main 去看看，会发现一个 java.exe 文件。这样就无需配置环境变量，也可以运行 Java 程序了。</p>\n<h1 id=\"3jdk与jre的区别\"><a class=\"markdownIt-Anchor\" href=\"#3jdk与jre的区别\">#</a> 3.JDK 与 JRE 的区别</h1>\n<p>​    JDK 是 Java 的开发工具，它不仅提供了 Java 程序运行所需的 JRE，还提供了一系列的编译，运行等工具，如 javac，java，javaw 等。JRE 只是 Java 程序的运行环境，它最核心的内容就是 JVM（Java 虚拟机）及核心类库。</p>\n<h1 id=\"4tomcat和jdk是什么关系\"><a class=\"markdownIt-Anchor\" href=\"#4tomcat和jdk是什么关系\">#</a> 4.Tomcat 和 JDK 是什么关系</h1>\n<p>tomcat 是 java 的 web 项目运行容器之一；<br>\njdk 是 java 运行环境。也就是说 java 没有 jdk 肯定是没法编译运行的。<br>\njava 运行必须依赖于 jdk 环境，但是不一定要用 tomcat 容器，如 WebLogic、WebSphere 等都是可以的。</p>\n",
+            "tags": [
+                "java"
+            ]
+        },
+        {
+            "id": "https://ashgen.gitee.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/",
+            "url": "https://ashgen.gitee.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/",
+            "title": "Spring简介",
+            "date_published": "2023-03-26T05:46:25.000Z",
+            "content_html": "<h1 id=\"spring简介\"><a class=\"markdownIt-Anchor\" href=\"#spring简介\">#</a> Spring 简介</h1>\n<p>Spring 是一个轻量级 Java 开发框架，最早有 Rod Johnson 创建，目的是为了解决企业级应用开发的业务逻辑层和其他各层的耦合问题。它是一个分层的 JavaSE/JavaEE full-stack（一站式）轻量级开源框架，为开发 Java 应用程序提供全面的基础架构支持。Spring 负责基础架构，因此 Java 开发者可以专注于应用程序的开发。</p>\n<p>Spring 最根本的使命是解决企业级应用开发的复杂性，即简化 Java 开发。</p>\n<p>Spring 可以做很多事情，它为企业级开发提供了丰富的功能，但是这些功能的底层都依赖于它的两个核心特性，也就是依赖注入（dependency injection，DI）和面向切面编程（aspect-oriented programming，AOP）。</p>\n<p>为了降低 Java 开发的复杂性，Spring 采取了以下 4 种关键策略：</p>\n<ol>\n<li>基于 POJO 的轻量级和最小侵入性编程；</li>\n<li>通过依赖注入和面向接口实现松耦合；</li>\n<li>基于切面和惯例进行声明式编程；</li>\n<li>通过切面和模板减少样板式代码。</li>\n</ol>\n<h1 id=\"spring框架核心\"><a class=\"markdownIt-Anchor\" href=\"#spring框架核心\">#</a> Spring 框架核心</h1>\n<p>Spring 设计目标：Spring 为开发者提供一个一站式轻量级应用开发平台；</p>\n<p>Spring 设计理念：在 JavaEE 开发中，支持 POJO 和 JavaBean 开发方式，使应用面向接口开发，充分支持 OO（面向对象）设计方法；Spring 通过 IoC 容器实现对象耦合关系的管理，并实现依赖反转，将对象之间的依赖关系交给 IoC 容器，实现解耦；</p>\n<p>Spring 框架的核心：IoC 容器和 AOP 模块。通过 IoC 容器管理 POJO 对象以及他们之间的耦合关系；通过 AOP 以动态非侵入的方式增强服务。</p>\n<h1 id=\"spring的优缺点\"><a class=\"markdownIt-Anchor\" href=\"#spring的优缺点\">#</a> Spring 的优缺点</h1>\n<h2 id=\"优点\"><a class=\"markdownIt-Anchor\" href=\"#优点\">#</a> 优点</h2>\n<h3 id=\"方便解耦简化开发\"><a class=\"markdownIt-Anchor\" href=\"#方便解耦简化开发\">#</a> 方便解耦，简化开发</h3>\n<p>Spring 就是一个大工厂，可以将所有对象的创建和依赖关系的维护，交给 Spring 管理。</p>\n<h3 id=\"aop编程的支持\"><a class=\"markdownIt-Anchor\" href=\"#aop编程的支持\">#</a> AOP 编程的支持</h3>\n<p>Spring 提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能。</p>\n<h3 id=\"声明式事务的支持\"><a class=\"markdownIt-Anchor\" href=\"#声明式事务的支持\">#</a> 声明式事务的支持</h3>\n<p>只需要通过配置就可以完成对事务的管理，而无需手动编程。</p>\n<h3 id=\"方便程序的测试\"><a class=\"markdownIt-Anchor\" href=\"#方便程序的测试\">#</a> 方便程序的测试</h3>\n<p>Spring 对 Junit4 支持，可以通过注解方便的测试 Spring 程序。</p>\n<h3 id=\"方便集成各种优秀框架\"><a class=\"markdownIt-Anchor\" href=\"#方便集成各种优秀框架\">#</a> 方便集成各种优秀框架</h3>\n<p>Spring 不排斥各种优秀的开源框架，其内部提供了对各种优秀框架的直接支持（如：Struts、Hibernate、MyBatis 等）。</p>\n<h3 id=\"降低javaee-api的使用难度\"><a class=\"markdownIt-Anchor\" href=\"#降低javaee-api的使用难度\">#</a> 降低 JavaEE API 的使用难度</h3>\n<p>Spring 对 JavaEE 开发中非常难用的一些 API（JDBC、JavaMail、远程调用等），都提供了封装，使这些 API 应用难度大大降低。</p>\n<h2 id=\"缺点\"><a class=\"markdownIt-Anchor\" href=\"#缺点\">#</a> 缺点</h2>\n<p>Spring 明明一个很轻量级的框架，却给人感觉大而全<br>\n Spring 依赖反射，反射影响性能<br>\n使用门槛升高，入门 Spring 需要较长时间<br>\n Spring 的应用场景<br>\n应用场景：JavaEE 企业应用开发，包括 SSH、SSM 等</p>\n<h2 id=\"spring价值\"><a class=\"markdownIt-Anchor\" href=\"#spring价值\">#</a> Spring 价值</h2>\n<p>Spring 是非侵入式的框架，目标是使应用程序代码对框架依赖最小化；<br>\nSpring 提供一个一致的编程模型，使应用直接使用 POJO 开发，与运行环境隔离开来；<br>\nSpring 推动应用设计风格向面向对象和面向接口开发转变，提高了代码的重用性和可测试性；</p>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0OTMyODM1L2FydGljbGUvZGV0YWlscy8xMDk2OTQxOTY=\">Springboot 介绍</span></p>\n",
+            "tags": [
+                "java"
+            ]
+        }
+    ]
+}

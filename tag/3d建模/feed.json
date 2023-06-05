@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "寻找未曾见过的你 • All posts by \"3d建模\" tag",
+    "description": "吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。",
+    "home_page_url": "https://ashgen.gitee.io",
+    "items": [
+        {
+            "id": "https://ashgen.gitee.io/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/",
+            "url": "https://ashgen.gitee.io/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/",
+            "title": "sketchup导入Unity3d",
+            "date_published": "2023-02-25T12:46:25.000Z",
+            "content_html": "<ol>\n<li>新建 SketchUp 工程的时候，选择工程单位为 Meter (米)，如果不是米，则在 Tools -&gt; Model Info -&gt; Unit 内将 Format 修改为 Decimal : Meters 即可。因为会影响到 SketchUp 的原图，所以请注意如果精度不够的话还需要把 Precision 变更为足够的精度，把 Enable length snapping 也设置为和精度一致使其能够正确的执行自动捕捉。</li>\n<li>导出时注意选择参数，请选择 File -&gt; Export -&gt; 3D Model 里面有 FBX 这个格式（好像只有 Pro 版本的 SketchUp 才行哦），先不要着急 Export，选择一下 Options 修改几个选项，Export Options 中的<br>\n选中 Triangulate all faces 将所有面变为三角形构成的<br>\n选中 Export two-sided faces 将双面都导出（有的平面两面材质不同的，这很重要）<br>\n选中 Export texture maps 导出贴图表面<br>\n选中 Swap YZ coordinates（Y 朝上）<br>\n单位选择 Model Unit（如果你第一步是对的，这里选 Meters 也是一样的效果）</li>\n<li>在 Unity3D 中选择 Asserts -&gt; Import New Asset，找到刚刚导出的 fbx 文件，选中，文件导入成功后选择 Project 窗口中的模型，然后将其 Inspector 中的 (FBXImporter) -&gt; Meshes -&gt; Scale Factor（缩放比例）修改为 1。最后将模型拖入场景子级就大功告成啦。</li>\n</ol>\n",
+            "tags": [
+                "3d建模"
+            ]
+        },
+        {
+            "id": "https://ashgen.gitee.io/2023/02/24/sketchup/sketchup%E5%AF%BC%E5%85%A53dsmax/",
+            "url": "https://ashgen.gitee.io/2023/02/24/sketchup/sketchup%E5%AF%BC%E5%85%A53dsmax/",
+            "title": "sketchup导入3dsmax",
+            "date_published": "2023-02-24T12:46:25.000Z",
+            "content_html": "<p>sketchup——》unity3d 丢失模型贴图问题解决：打开 su 模型，文件→另存为→保存文件类型下拉另存为 8 版本<img data-src=\"sketchup%E5%AF%BC%E5%85%A53dsmax/image-20230225153742223.png\" alt=\"image-20230225153742223\"></p>\n",
+            "tags": [
+                "3d建模"
+            ]
+        }
+    ]
+}

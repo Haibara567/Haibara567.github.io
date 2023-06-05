@@ -1,0 +1,942 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ashgen.gitee.io</id>
+    <title>寻找未曾见过的你</title>
+    <link href="https://ashgen.gitee.io" />
+    <updated>2023-03-26T12:46:25.000Z</updated>
+    <category term="XXX" />
+    <category term="细节问题" />
+    <category term="java" />
+    <category term="3d建模" />
+    <category term="环境" />
+    <category term="博客" />
+    <category term="区块链" />
+    <category term="实习" />
+    <category term="数据库" />
+    <category term="玩" />
+    <category term="网址" />
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+        <title>JDK与JRE的区别</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/26/java/JDK%E4%B8%8EJRE%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+        <content type="html">&lt;p&gt;JDK 和 JRE 是 Java 开发和运行工具，其中 JDK 包含了 JRE，但是 JRE 是可以独立安装的，它们在 Java 开发和运行的时候起到不同的作用&lt;/p&gt;
+&lt;h1 id=&#34;1jdk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1jdk&#34;&gt;#&lt;/a&gt; 1.JDK&lt;/h1&gt;
+&lt;p&gt;​    JDK 是 Java Development Kit 的缩写，是 Java 的开发工具包，主要包含了各种类库和工具，当然也包含了另外一个 JRE.。那么为什么要包含另外一个 JRE 呢？而且 &amp;lt;JDK 安装目录&amp;gt;/JRE/bin 目录下，包含有 server 一个文件夹～包含一个 jvm.dll，这说明 JDK 提供了一个虚拟机。&lt;/p&gt;
+&lt;p&gt;​    另外，JDK 的 bin 目录下有各种 Java 程序需要用到的命令，与 JRE 的 bin 目录最明显的区别就是 JDK 文件下才有 javac，这一点很好理解，因为 JRE 只是一个运行环境而已，与开发无关。正因为如此，具备开发功能的 JDK 所包含的 JRE 下才会同时有 server 的 JVM，而仅仅作为运行环境的 JRE 下，只需要 server 的 jvm.dll 就够了。&lt;/p&gt;
+&lt;p&gt;注意：JDK 所提供的运行环境和工具度需要进行环境变量的配置以后，才能使用，最主要的配置就是把 &amp;lt;JDK 安装目录&amp;gt;/bin 目录设置为 Path 环境变量值的一部分。&lt;/p&gt;
+&lt;h1 id=&#34;2jre&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2jre&#34;&gt;#&lt;/a&gt; 2.JRE&lt;/h1&gt;
+&lt;p&gt;​    JRE 是 Java Runtime Environment 的缩写，是 Java 程序的运行环境。既然是运行，当然要包含 JVM，也就是所谓的 Java 虚拟机，还有所以的 Java 类库的 class 文件，都在 lib 目录下，并且都打包成了 jar。&lt;/p&gt;
+&lt;p&gt;至于在 Windows 上的虚拟机是哪个文件呢？就是 &amp;lt;JRE 安装目录&amp;gt;/bin/server 中的 jvm.dll。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://img-blog.csdn.net/20160807174832320?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;另外，安装 JRE 的时候安装程序会自动把 JRE 的 java.exe 添加到了系统变量中。系统变量 Path 的最前面有 % SystemRoot% system32;% SystemRoot%; 这样的配置，那样到 Windows/system32 目录下 main 去看看，会发现一个 java.exe 文件。这样就无需配置环境变量，也可以运行 Java 程序了。&lt;/p&gt;
+&lt;h1 id=&#34;3jdk与jre的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3jdk与jre的区别&#34;&gt;#&lt;/a&gt; 3.JDK 与 JRE 的区别&lt;/h1&gt;
+&lt;p&gt;​    JDK 是 Java 的开发工具，它不仅提供了 Java 程序运行所需的 JRE，还提供了一系列的编译，运行等工具，如 javac，java，javaw 等。JRE 只是 Java 程序的运行环境，它最核心的内容就是 JVM（Java 虚拟机）及核心类库。&lt;/p&gt;
+&lt;h1 id=&#34;4tomcat和jdk是什么关系&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4tomcat和jdk是什么关系&#34;&gt;#&lt;/a&gt; 4.Tomcat 和 JDK 是什么关系&lt;/h1&gt;
+&lt;p&gt;tomcat 是 java 的 web 项目运行容器之一；&lt;br&gt;
+jdk 是 java 运行环境。也就是说 java 没有 jdk 肯定是没法编译运行的。&lt;br&gt;
+java 运行必须依赖于 jdk 环境，但是不一定要用 tomcat 容器，如 WebLogic、WebSphere 等都是可以的。&lt;/p&gt;
+</content>
+        <category term="java" />
+        <updated>2023-03-26T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/</id>
+        <title>Spring简介</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/26/java/spring%E7%AE%80%E4%BB%8B/"/>
+        <content type="html">&lt;h1 id=&#34;spring简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring简介&#34;&gt;#&lt;/a&gt; Spring 简介&lt;/h1&gt;
+&lt;p&gt;Spring 是一个轻量级 Java 开发框架，最早有 Rod Johnson 创建，目的是为了解决企业级应用开发的业务逻辑层和其他各层的耦合问题。它是一个分层的 JavaSE/JavaEE full-stack（一站式）轻量级开源框架，为开发 Java 应用程序提供全面的基础架构支持。Spring 负责基础架构，因此 Java 开发者可以专注于应用程序的开发。&lt;/p&gt;
+&lt;p&gt;Spring 最根本的使命是解决企业级应用开发的复杂性，即简化 Java 开发。&lt;/p&gt;
+&lt;p&gt;Spring 可以做很多事情，它为企业级开发提供了丰富的功能，但是这些功能的底层都依赖于它的两个核心特性，也就是依赖注入（dependency injection，DI）和面向切面编程（aspect-oriented programming，AOP）。&lt;/p&gt;
+&lt;p&gt;为了降低 Java 开发的复杂性，Spring 采取了以下 4 种关键策略：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于 POJO 的轻量级和最小侵入性编程；&lt;/li&gt;
+&lt;li&gt;通过依赖注入和面向接口实现松耦合；&lt;/li&gt;
+&lt;li&gt;基于切面和惯例进行声明式编程；&lt;/li&gt;
+&lt;li&gt;通过切面和模板减少样板式代码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;spring框架核心&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring框架核心&#34;&gt;#&lt;/a&gt; Spring 框架核心&lt;/h1&gt;
+&lt;p&gt;Spring 设计目标：Spring 为开发者提供一个一站式轻量级应用开发平台；&lt;/p&gt;
+&lt;p&gt;Spring 设计理念：在 JavaEE 开发中，支持 POJO 和 JavaBean 开发方式，使应用面向接口开发，充分支持 OO（面向对象）设计方法；Spring 通过 IoC 容器实现对象耦合关系的管理，并实现依赖反转，将对象之间的依赖关系交给 IoC 容器，实现解耦；&lt;/p&gt;
+&lt;p&gt;Spring 框架的核心：IoC 容器和 AOP 模块。通过 IoC 容器管理 POJO 对象以及他们之间的耦合关系；通过 AOP 以动态非侵入的方式增强服务。&lt;/p&gt;
+&lt;h1 id=&#34;spring的优缺点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring的优缺点&#34;&gt;#&lt;/a&gt; Spring 的优缺点&lt;/h1&gt;
+&lt;h2 id=&#34;优点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h2&gt;
+&lt;h3 id=&#34;方便解耦简化开发&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方便解耦简化开发&#34;&gt;#&lt;/a&gt; 方便解耦，简化开发&lt;/h3&gt;
+&lt;p&gt;Spring 就是一个大工厂，可以将所有对象的创建和依赖关系的维护，交给 Spring 管理。&lt;/p&gt;
+&lt;h3 id=&#34;aop编程的支持&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#aop编程的支持&#34;&gt;#&lt;/a&gt; AOP 编程的支持&lt;/h3&gt;
+&lt;p&gt;Spring 提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能。&lt;/p&gt;
+&lt;h3 id=&#34;声明式事务的支持&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#声明式事务的支持&#34;&gt;#&lt;/a&gt; 声明式事务的支持&lt;/h3&gt;
+&lt;p&gt;只需要通过配置就可以完成对事务的管理，而无需手动编程。&lt;/p&gt;
+&lt;h3 id=&#34;方便程序的测试&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方便程序的测试&#34;&gt;#&lt;/a&gt; 方便程序的测试&lt;/h3&gt;
+&lt;p&gt;Spring 对 Junit4 支持，可以通过注解方便的测试 Spring 程序。&lt;/p&gt;
+&lt;h3 id=&#34;方便集成各种优秀框架&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方便集成各种优秀框架&#34;&gt;#&lt;/a&gt; 方便集成各种优秀框架&lt;/h3&gt;
+&lt;p&gt;Spring 不排斥各种优秀的开源框架，其内部提供了对各种优秀框架的直接支持（如：Struts、Hibernate、MyBatis 等）。&lt;/p&gt;
+&lt;h3 id=&#34;降低javaee-api的使用难度&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#降低javaee-api的使用难度&#34;&gt;#&lt;/a&gt; 降低 JavaEE API 的使用难度&lt;/h3&gt;
+&lt;p&gt;Spring 对 JavaEE 开发中非常难用的一些 API（JDBC、JavaMail、远程调用等），都提供了封装，使这些 API 应用难度大大降低。&lt;/p&gt;
+&lt;h2 id=&#34;缺点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#缺点&#34;&gt;#&lt;/a&gt; 缺点&lt;/h2&gt;
+&lt;p&gt;Spring 明明一个很轻量级的框架，却给人感觉大而全&lt;br&gt;
+ Spring 依赖反射，反射影响性能&lt;br&gt;
+使用门槛升高，入门 Spring 需要较长时间&lt;br&gt;
+ Spring 的应用场景&lt;br&gt;
+应用场景：JavaEE 企业应用开发，包括 SSH、SSM 等&lt;/p&gt;
+&lt;h2 id=&#34;spring价值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring价值&#34;&gt;#&lt;/a&gt; Spring 价值&lt;/h2&gt;
+&lt;p&gt;Spring 是非侵入式的框架，目标是使应用程序代码对框架依赖最小化；&lt;br&gt;
+Spring 提供一个一致的编程模型，使应用直接使用 POJO 开发，与运行环境隔离开来；&lt;br&gt;
+Spring 推动应用设计风格向面向对象和面向接口开发转变，提高了代码的重用性和可测试性；&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0OTMyODM1L2FydGljbGUvZGV0YWlscy8xMDk2OTQxOTY=&#34;&gt;Springboot 介绍&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="java" />
+        <updated>2023-03-26T05:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%89%E7%AB%A0/</id>
+        <title>第三章</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%89%E7%AB%A0/"/>
+        <content type="html">&lt;h1 id=&#34;完整性约束的三个子句&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#完整性约束的三个子句&#34;&gt;#&lt;/a&gt; 完整性约束的三个子句&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;主键子句：Primary Key&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;体现实体完整性：取值非空、唯一&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;外键子句: Foreign Key&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;体现参照完整性: References 指出所对应的列名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;检查子句：Check&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用户自定义完整性：指出取值的具体要求&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;DISTINCT&lt;/span&gt; Sno &lt;span class=&#34;token keyword&#34;&gt;From&lt;/span&gt; SC&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;DISTINCT 的作用是删除重复值&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Select&lt;/span&gt; sno&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;From&lt;/span&gt; SC&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Group&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;by&lt;/span&gt; sno&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;Having&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;count&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;where 与 having 的区别在于作用对象不同 where 作用于基本表或视图，选出满足条件的元组；having 作用于组，选择满足条件的组。&lt;/p&gt;
+</content>
+        <category term="XXX" />
+        <updated>2023-03-17T14:13:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA/</id>
+        <title>第六章关系数据理论</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E7%90%86%E8%AE%BA/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;关系模式&lt;/strong&gt;是对元组集合形式化的描述，R (U，D，Dom，F）&lt;/p&gt;
+&lt;p&gt;其中 R 为关系名，U 为属性集，D 为属性来自的域，Dom 为属性向域的映象集合，F 为属性间数据的赖关系集合。简写成: R&amp;lt;U，F&amp;gt;。关系模式是静态的，关系是动态的，不同时刻模式中的关系可能不同，但必须满足模式中 F 所指定的完整性约束条件。&lt;/p&gt;
+</content>
+        <category term="数据库" />
+        <updated>2023-03-17T08:19:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/</id>
+        <title>C++实用函数</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/17/C/C++%E5%AE%9E%E7%94%A8%E5%87%BD%E6%95%B0/"/>
+        <content type="html">&lt;h1 id=&#34;strtok&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#strtok&#34;&gt;#&lt;/a&gt; strtok()&lt;/h1&gt;
+&lt;h2 id=&#34;描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#描述&#34;&gt;#&lt;/a&gt; 描述&lt;/h2&gt;
+&lt;p&gt;C 库函数 &lt;strong&gt;char *strtok(char *str, const char *delim)&lt;/strong&gt; 分解字符串 &lt;strong&gt;str&lt;/strong&gt; 为一组字符串，&lt;strong&gt;delim&lt;/strong&gt; 为分隔符。&lt;/p&gt;
+&lt;h2 id=&#34;声明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#声明&#34;&gt;#&lt;/a&gt; 声明&lt;/h2&gt;
+&lt;p&gt;下面是 strtok () 函数的声明。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;char *strtok(char *str, const char *delim)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;参数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#参数&#34;&gt;#&lt;/a&gt; 参数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;str&lt;/strong&gt; – 要被分解成一组小字符串的字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;delim&lt;/strong&gt; – 包含分隔符的 C 字符串。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;返回值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#返回值&#34;&gt;#&lt;/a&gt; 返回值&lt;/h2&gt;
+&lt;p&gt;该函数返回被分解的第一个子字符串，如果没有可检索的字符串，则返回一个空指针。&lt;/p&gt;
+&lt;h2 id=&#34;实例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实例&#34;&gt;#&lt;/a&gt; 实例&lt;/h2&gt;
+&lt;p&gt;下面的实例演示了 strtok () 函数的用法。&lt;/p&gt;
+&lt;h2 id=&#34;实例-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实例-2&#34;&gt;#&lt;/a&gt; 实例&lt;/h2&gt;
+&lt;figure class=&#34;highlight c&#34;&gt;&lt;figcaption data-lang=&#34;c&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&amp;lt;string.h&gt;&lt;/span&gt; &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token macro property&#34;&gt;&lt;span class=&#34;token directive-hash&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;token directive keyword&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&amp;lt;stdio.h&gt;&lt;/span&gt;  &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; str&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;This is - www.runoob.com - website&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; s&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;-&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;token&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;      &lt;span class=&#34;token comment&#34;&gt;/* 获取第一个子字符串 */&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    token &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;strtok&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;str&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; s&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;      &lt;span class=&#34;token comment&#34;&gt;/* 继续获取其他的子字符串 */&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; token &lt;span class=&#34;token operator&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;token constant&#34;&gt;NULL&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;      &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;%s\n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; token &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;          &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        token &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;strtok&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; s&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;      &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;让我们编译并运行上面的程序，这将产生以下结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;This is 
+ www.runoob.com 
+ website
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;string中c_str-data-copypn函数的用法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#string中c_str-data-copypn函数的用法&#34;&gt;#&lt;/a&gt; string 中 c_str ()、data ()、copy (p,n) 函数的用法&lt;/h1&gt;
+&lt;p&gt;标准库的 string 类提供了 3 个成员函数来从一个 string 得到 c 类型的字符数组：c_str ()、data ()、copy (p,n)。&lt;/p&gt;
+&lt;h2 id=&#34;c_str生成一个const-char指针指向以空字符终止的数组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c_str生成一个const-char指针指向以空字符终止的数组&#34;&gt;#&lt;/a&gt; c_str ()：生成一个 const char * 指针，指向以空字符终止的数组。&lt;/h2&gt;
+&lt;p&gt;①这个数组的数据是临时的，当有一个改变这些数据的成员函数被调用后，其中的数据就会失效。因此要么现用先转换，要么把它的数据复制到用户自己可以管理的内存中。注意。看下例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;const char* c;
+string s=&amp;quot;1234&amp;quot;;
+c = s.c_str(); 
+cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl; //输出：1234
+s=&amp;quot;abcd&amp;quot;;
+cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl; //输出：abcd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面如果继续用 c 指针的话，导致的错误将是不可想象的。就如：1234 变为 abcd&lt;/p&gt;
+&lt;p&gt;其实上面的 c = s.c_str (); 不是一个好习惯。既然 c 指针指向的内容容易失效，我们就应该按照上面的方法，那怎么把数据复制出来呢？这就要用到 strcpy 等函数（推荐）。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;//const char* c; //①
+//char* c;       //②
+//char c[20]; 
+char* c=new char[20];
+string s=&amp;quot;1234&amp;quot;;
+//c = s.c_str(); 
+strcpy(c,s.c_str());
+cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl; //输出：1234
+s=&amp;quot;abcd&amp;quot;;
+cout&amp;lt;&amp;lt;c&amp;lt;&amp;lt;endl; //输出：1234
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：不能再像上面一样①所示了，const 还怎么向里面写入值啊；也不能②所示，使用了未初始化的局部变量 “c”，运行会出错的 。&lt;/p&gt;
+&lt;p&gt;② c_str () 返回一个客户程序可读不可改的指向字符数组的指针，不需要手动释放或删除这个指针。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;data (): 与 c_str () 类似，但是返回的数组不以空字符终止。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;sort&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sort&#34;&gt;#&lt;/a&gt; sort()&lt;/h1&gt;
+&lt;p&gt;对指定范围内元素进行快速排序&lt;/p&gt;
+&lt;p&gt;sort 是 STL 自带的系统函数，它的格式是：&lt;/p&gt;
+&lt;p&gt;void sort (要排序元素的起始地址，要排序元素的结束地址，比较函数)；&lt;/p&gt;
+&lt;p&gt;这里可以省略比较函数，他是默认从小到大排序的（升序排序）&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;algorithm&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+int main()
+&amp;#123;
+	int a[]=&amp;#123;3,5,2,6,9,3,5&amp;#125;;
+	sort(a,a+7);//7是数组的元素个数，这里a为数组的开头，a+7就等于排序到数组的第七个元素
+	for(int i=0;i&amp;lt;6;i++)
+		cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;quot; &amp;quot;;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出:&lt;/p&gt;
+&lt;p&gt;2 3 3 5 5 6&lt;/p&gt;
+&lt;p&gt;void sort (要排序元素的起始地址，要排序元素的结束地址，比较函数)；&lt;/p&gt;
+&lt;p&gt;这个比较函数的作用就是可以自定义排序方式，比如降序排序。&lt;/p&gt;
+&lt;p&gt;定义：bool cmp (int x,int y)…，如果返回 True 那么 x 就排在 y 前面。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;algorithm&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+bool cmp(int x,int y)
+&amp;#123;
+	if(x&amp;gt;y)return true;//降序
+	return false;
+&amp;#125;
+int main()
+&amp;#123;
+	int a[]=&amp;#123;3,5,2,6,9,3,5&amp;#125;;
+	sort(a,a+7,cmp);//7是数组的元素个数
+	for(int i=0;i&amp;lt;6;i++)
+		cout&amp;lt;&amp;lt;a[i]&amp;lt;&amp;lt;&amp;quot; &amp;quot;;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;p&gt;9 6 5 5 3 3&lt;/p&gt;
+&lt;h1 id=&#34;map&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map&#34;&gt;#&lt;/a&gt; Map&lt;/h1&gt;
+&lt;p&gt;map 是 STL 的一个关联容器，它提供一对一的 hash。&lt;/p&gt;
+&lt;p&gt;第一个可以称为关键字 (key)，每个关键字只能在 map 中出现一次；&lt;br&gt;
+第二个可能称为该关键字的值 (value)；&lt;br&gt;
+定义：&lt;br&gt;
+map &amp;lt;类型，类型&amp;gt; m;&lt;br&gt;
+ 举个栗子:&lt;br&gt;
+ 记录每个人的名字的对应的爱好，张三喜欢吃汉堡：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;map&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+int main()
+&amp;#123;
+	map&amp;lt;string,string&amp;gt; m;
+	m[&amp;quot;张三&amp;quot;]=&amp;quot;吃汉堡&amp;quot;;
+	cout&amp;lt;&amp;lt;&amp;quot;张三: &amp;quot;&amp;lt;&amp;lt;m[&amp;quot;张三&amp;quot;]; 
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;p&gt;张三：吃汉堡&lt;/p&gt;
+&lt;h1 id=&#34;stack栈&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#stack栈&#34;&gt;#&lt;/a&gt; stack (栈)&lt;/h1&gt;
+&lt;p&gt;头文件:&lt;/p&gt;
+&lt;p&gt;#include&lt;stack&gt;&lt;br&gt;
+stack 好像还有个翻译叫 “咸鱼”… 嘿嘿。&lt;/stack&gt;&lt;/p&gt;
+&lt;p&gt;栈的介绍：&lt;br&gt;
+栈就像一个盒子，可以放入或去除元素，但是个人类都知道，要把盒子底下的东西取出来，就必须先取出他上面的东西。&lt;/p&gt;
+&lt;p&gt;假如我们把 1、2、3、4、5 按顺序分别入栈：&lt;/p&gt;
+&lt;p&gt;栈的定义：&lt;br&gt;
+stack &amp;lt;类型 (可以不写)&amp;gt; st;&lt;br&gt;
+ 或者 stack st;&lt;br&gt;
+ 很 easy 是不？&lt;/p&gt;
+&lt;p&gt;栈的成员函数：&lt;br&gt;
+.empty ()	判断栈是否为空，空则返回 true&lt;br&gt;
+.pop ()	移除栈顶元素&lt;br&gt;
+.push (啥啥啥)	在栈顶增加元素&lt;br&gt;
+.size ()	返回栈中元素数目&lt;br&gt;
+.top ()	返回栈顶元素&lt;br&gt;
+.empty ()  判断栈是否为空。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;stack st;
+if(st.empty())//如果是空那么执行下面代码
+    ......
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;.push (啥啥啥), 在栈顶增加元素。&lt;/p&gt;
+&lt;p&gt;.top ()，返回栈顶元素，记住是返回，要单独输出。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;stack&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+stack&amp;lt;int&amp;gt; st;
+int main()&amp;#123;
+    st.push(5418);
+    cout&amp;lt;&amp;lt;st.top();//输出栈顶元素
+    return 0;
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 5418。&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;.size (), 返回栈中元素数目。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;stack&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+stack&amp;lt;int&amp;gt; st;
+int main()&amp;#123;
+    st.push(5418);
+    cout&amp;lt;&amp;lt;st.size();
+    return 0;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 1&lt;/p&gt;
+&lt;p&gt;.pop ()，移除栈顶元素：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;stack&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+using namespace std;
+stack&amp;lt;int&amp;gt; st;
+int main()&amp;#123;
+    
+
+    st.push(1452);
+    st.push(5418);
+    st.pop();
+    cout&amp;lt;&amp;lt;st.top();
+    
+    return 0;
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 1452。&lt;/p&gt;
+&lt;p&gt;简单不？&lt;/p&gt;
+&lt;h1 id=&#34;二分查找&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二分查找&#34;&gt;#&lt;/a&gt; 二分查找&lt;/h1&gt;
+&lt;p&gt;头文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;algorithm&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;美妙的函数：&lt;/p&gt;
+&lt;h2 id=&#34;1lower_bound函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1lower_bound函数&#34;&gt;#&lt;/a&gt; 1.lower_bound 函数&lt;/h2&gt;
+&lt;p&gt;对于有序容器，有序容器，有序容器（重要的事情说三遍）快速二分查找出第一个大于等于&lt;/p&gt;
+&lt;p&gt;指定数的位置（下标），如果没有找到，返回最后一个数据后面的位置。&lt;/p&gt;
+&lt;p&gt;对于数组，通常的格式为：&lt;/p&gt;
+&lt;p&gt;查找的数组下标 = lower_bound (数组要查找的开始位置，数组要查找的结束位置后面，要找的数) – 数组开始位置 (一般写数组名);&lt;/p&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;algorithm&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+
+using namespace std;
+
+int main() &amp;#123;
+
+    int a[5] = &amp;#123; 1,2,3,3,8 &amp;#125;;
+     
+    //从 a 数组中找到第一个不小于   3 的元素
+     
+    int   index = lower_bound(a, a + 5, 3)-a;//查找的数组下标 = lower_bound(数组要查找的开始位置，数组要查找的结束位置后面，要找的数) – 数组开始位置;
+     
+    if   (index==5 ) cout &amp;lt;&amp;lt; &amp;quot; not found! &amp;quot;;//index=5，也就是数组末尾的位置。
+    else  cout &amp;lt;&amp;lt; index;
+     
+    return   0;
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 2。&lt;/p&gt;
+&lt;h2 id=&#34;2upper_bound函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2upper_bound函数&#34;&gt;#&lt;/a&gt; 2.upper_bound 函数&lt;/h2&gt;
+&lt;p&gt;有一个类似 lower_bound 的函数 upper_bound, 快速二分查找出第一个大于指定数的位置（下&lt;/p&gt;
+&lt;p&gt;标），如果没有找到，返回最后一个数据后面的位置。&lt;/p&gt;
+&lt;p&gt;举个栗子，啊… 快没栗子了。(っ °Д °;) っ&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;algorithm&amp;gt;
+#include&amp;lt;iostream&amp;gt;
+
+using namespace std;
+
+int main() &amp;#123;
+
+    int a[5] = &amp;#123; 1,2,3,3,8 &amp;#125;;
+    //从 a 数组中找到第一个大于 3 的元素
+     
+    int   index = upper_bound(a, a + 5, 3)-a;
+     
+    if   (index==5 ) cout &amp;lt;&amp;lt; &amp;quot; not found! &amp;quot;;
+    else cout &amp;lt;&amp;lt; index;
+     
+    return   0;
+
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输出 4.&lt;/p&gt;
+&lt;h2 id=&#34;3binary_search查找数组内某个元素是否出现&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3binary_search查找数组内某个元素是否出现&#34;&gt;#&lt;/a&gt; 3.binary_search：查找数组内某个元素是否出现。&lt;/h2&gt;
+&lt;p&gt;void binary_search (数组首地址，结束地址，要查找的数)&lt;/p&gt;
+&lt;p&gt;返回值为 bool 类型，找到了返回 true。&lt;/p&gt;
+</content>
+        <category term="XXX" />
+        <updated>2023-03-17T08:18:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/</id>
+        <title>第八章：数据库编程</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A8%8B/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;终端交互方式下使用一一交互式 SQL&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt; 嵌入在高级语言中使用一一嵌入式 SQL&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;嵌入式sql&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#嵌入式sql&#34;&gt;#&lt;/a&gt; 嵌入式 SQL&lt;/h1&gt;
+&lt;h2 id=&#34;实现方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实现方法&#34;&gt;#&lt;/a&gt; 实现方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;扩充宿主语言（C 语言、PASCAL 语言等高级语言）编译程序，使之支持 SQL&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将嵌入 SQL 的宿主语言转化为预处理程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;游标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#游标&#34;&gt;#&lt;/a&gt; 游标&lt;/h1&gt;
+&lt;p&gt;SQL 一次处理一组记录，主语言一次处理一个记录。游标是一个数据缓冲区，存放 SQL 的查询结果，等待主变量取用。&lt;/p&gt;
+&lt;h1 id=&#34;存储过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#存储过程&#34;&gt;#&lt;/a&gt; &lt;strong&gt;存储过程&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;类似 C 语言中的函数，包含数据操纵语句、变量、逻辑控制语句等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;系统存储过程&lt;/strong&gt;：以 sp 开头，用来进行系统的各项设定，取得信息，相关管理工作。&lt;/p&gt;
+&lt;p&gt;sp_help 就是取得指定对象的相关信息。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;扩展存储过程&lt;/strong&gt;：以 xp 开头，用来调用操作系统提供的功能。&lt;br&gt;
+exec master…xp cmdshe11 ‘ping 10.8.16.1’&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用户自定义的存储过程&lt;/strong&gt;：由用户在自己的数据库中创建的存储过程，类似 C 语言中的用户自定义函数&lt;/p&gt;
+</content>
+        <category term="数据库" />
+        <updated>2023-03-12T12:23:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/</id>
+        <title>第十一章：并发控制</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/"/>
+        <content type="html">&lt;h1 id=&#34;并发的好处&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#并发的好处&#34;&gt;#&lt;/a&gt; 并发的好处&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;改善系统资源利用率&lt;/li&gt;
+&lt;li&gt;改善短事务的响应时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;并发的坏处&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#并发的坏处&#34;&gt;#&lt;/a&gt; 并发的坏处&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;丢失修改&lt;/p&gt;
+&lt;p&gt;事务 A 和 B 读入同一数据并修改，B 提交的结果破坏了 A 提交的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不可重复读&lt;/p&gt;
+&lt;p&gt;A 读取后，B 修改，A 再读就不一样了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;读脏数据&lt;/p&gt;
+&lt;p&gt;A 修改后，B 读，A 被撤销，B 读到的数据就是脏数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;加锁&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#加锁&#34;&gt;#&lt;/a&gt; 加锁&lt;/h1&gt;
+&lt;p&gt;几个事务的并行执行是正确的，当且仅当其结果与按某一个次序串行执行事务的结果相同&lt;/p&gt;
+&lt;p&gt;排他锁（写锁，X 锁），加上后不能再加其他任何锁&lt;/p&gt;
+&lt;p&gt;共享锁（读锁，S 锁），加上后可以再加 S 锁&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一级封锁协议&lt;/strong&gt;：事务在修改数据之前必须加 X 锁，事务结束时释放，可防止丢失修改&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二级封锁协议&lt;/strong&gt;：一级协议的基础上加上事务在读取数据之前必须加 S 锁，&lt;strong&gt;读完释放&lt;/strong&gt;，可防止读脏数据&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三级封锁协议&lt;/strong&gt;：一级协议的基础上加上事务在读取数据之前必须加 S 锁，&lt;strong&gt;事务结束时释放&lt;/strong&gt;，保证可重复读&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;活锁&lt;/strong&gt;：某个事务永远处于等待状态，解决方法：先来先服务&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;死锁&lt;/strong&gt;：多个事务都在等待另一个解除封锁，解决方法：死锁预防、死锁检测&lt;/p&gt;
+&lt;p&gt;若一个并行调度的结果等价于某个串行调度的结果，则该并行调度称为&lt;strong&gt;可串行化的调度&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;两段锁协议&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#两段锁协议&#34;&gt;#&lt;/a&gt; 两段锁协议&lt;/h1&gt;
+&lt;p&gt;在对任何数据进行读、写之前，事务必须首先获得该数据的封锁。在释放一个封锁后，事务不得再获得任何其他封锁。即将事务分为两个阶段，第一为获得封锁，第二为释放封锁。&lt;/p&gt;
+&lt;p&gt;遵循两段锁协议仍可能死锁。&lt;/p&gt;
+&lt;p&gt;对任何一个事务而言，在调度中获得其最后一个锁的时刻，称为该事务的&lt;strong&gt;封锁点&lt;/strong&gt;。&lt;/p&gt;
+</content>
+        <category term="数据库" />
+        <updated>2023-03-12T12:16:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF/</id>
+        <title>第十章：数据库系统概述</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/12/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E6%81%A2%E5%A4%8D%E6%8A%80%E6%9C%AF/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;事务&lt;/strong&gt;即数据库操作序列，是一个不可分割的工作单位。是恢复和并发控制的基本单位&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;事物的 ACID 特性&lt;/strong&gt;：&lt;br&gt;
+（1）原子性 (Atomicity)：事务被视为不可分割的最小单元，事务的所有操作要么全部提交成&lt;br&gt;
+功，要么全部失败回滚。回滚可以用回滚日志来实现，回滚日志记录着事务所执行的修改操作，&lt;br&gt;
+在回滚时反向执行这些修改操作即可。&lt;br&gt;
+（2）一致性 (Consistency)：数据库在事务执行前后都保持一致性状态。在一致性状态下，所有&lt;br&gt;
+事务对一个数据的读取结果都是相同的。&lt;br&gt;
+（3）隔离性 (Isolation)：一个事务所做的修改在最终提交以前，对其它事务是不可见的。&lt;br&gt;
+（4）持久性 (Durability)：一旦事务提交，则其所做的修改将会永远保存到数据库中。即使系统&lt;br&gt;
+发生崩溃，事务执行的结果也不能丢失。&lt;/p&gt;
+&lt;h1 id=&#34;故障分类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#故障分类&#34;&gt;#&lt;/a&gt; 故障分类&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;事务内部故障&lt;/p&gt;
+&lt;p&gt;恢复操作是&lt;strong&gt;事务撤销&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;系统故障（软故障）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;介质故障（硬故障）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;计算机病毒&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;数据转储分类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据转储分类&#34;&gt;#&lt;/a&gt; 数据转储分类&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;动态转储&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;静态转储&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;海量转储&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;动态海量转储&lt;/td&gt;
+&lt;td&gt;静态海量转储&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;增量转储&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;动态增量转储&lt;/td&gt;
+&lt;td&gt;静态增量转储&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;日志文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#日志文件&#34;&gt;#&lt;/a&gt; 日志文件&lt;/h1&gt;
+&lt;p&gt;记录事务对数据库的更新操作&lt;/p&gt;
+</content>
+        <category term="数据库" />
+        <updated>2023-03-12T12:15:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/11/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/</id>
+        <title></title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/11/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1/"/>
+        <content type="html">&lt;p&gt;数据库设计是&lt;strong&gt;结构设计&lt;/strong&gt;与&lt;strong&gt;行为设计&lt;/strong&gt;的结合&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结构设计&lt;/strong&gt;一一系统的静态描述，括模式、子模式的描述，即设计数据库框架或数据库结构&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;行为设计&lt;/strong&gt;一一系统的动态描述，即设计应用程序、事务处理等&lt;br&gt;
+&lt;strong&gt;将数据库与对数据库的操作分离设计&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;image-20230311164839977-16785372180531.png&#34; alt=&#34;image-20230311164839977&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;数据库设计基本步骤&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据库设计基本步骤&#34;&gt;#&lt;/a&gt; 数据库设计基本步骤&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;需求分析&lt;/p&gt;
+&lt;p&gt;分析用户基本要求，确定系统边界，分析数据和处理过程，编写系统分析报告&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;概念结构设计&lt;/p&gt;
+&lt;p&gt;将求分析抽象为概念模型的过程 (E-R 图）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逻辑结构设计&lt;/p&gt;
+&lt;p&gt;将概念模型转换为计算机支持的数据模型的过程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;物理结构设计&lt;/p&gt;
+&lt;p&gt;为逻辑数据模型选取适当的物理结构的过程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库实施&lt;/p&gt;
+&lt;p&gt;数据的载入，应用程序的编制与调试&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据库运行维护&lt;/p&gt;
+&lt;p&gt;系统运行过程中的评价、维护与调整&lt;/p&gt;
+&lt;h1 id=&#34;数据库各级模式的形成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据库各级模式的形成&#34;&gt;#&lt;/a&gt; 数据库各级模式的形成&lt;/h1&gt;
+&lt;p&gt;数据库的各级模式是在设计过程中逐步形成的&lt;/p&gt;
+&lt;p&gt;需求分析阶段&lt;/p&gt;
+&lt;p&gt;综合各个用户的应用需求 (现实世界的需求)&lt;br&gt;
+ 概念设计阶段形成独立于机器特点、独立于各个 DBMS 产品的&lt;strong&gt;概念模式&lt;/strong&gt; (信息世界模型)，用 E-R 图来描述。&lt;br&gt;
+在逻辑设计阶段将 E-R 图转换成具体的数据库产品支持的逻辑模型如关系模型，形成数据库&lt;strong&gt;逻辑模式&lt;/strong&gt;。然后根据用户处理的要求，安全性的考虑，在基本表的基础上再建立必要的视图 (VIEW) 形成数据的&lt;strong&gt;外模式&lt;/strong&gt;。&lt;br&gt;
+在物理设计阶段根据 DBMS 特点和处理的要进行物理存储安排，设计索引，形成数据库&lt;strong&gt;内模式&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <updated>2023-03-11T12:19:10.984Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98/</id>
+        <title>专业问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E4%B8%93%E4%B8%9A%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;数据结构类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据结构类&#34;&gt;#&lt;/a&gt; 数据结构类&lt;/h1&gt;
+&lt;h2 id=&#34;b树和b树的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#b树和b树的区别&#34;&gt;#&lt;/a&gt; B 树和 B + 树的区别？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;B 树在所有结点都存数据，B + 树只在叶子结点存数据&lt;/li&gt;
+&lt;li&gt;B + 树支持遍历叶子结点，B 树不支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;说几种排序的算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#说几种排序的算法&#34;&gt;#&lt;/a&gt; 说几种排序的算法&lt;/h2&gt;
+&lt;p&gt;选择、冒泡、插入、快速、堆、归并排序&lt;/p&gt;
+&lt;h2 id=&#34;快速排序的思想&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速排序的思想&#34;&gt;#&lt;/a&gt; 快速排序的思想？&lt;/h2&gt;
+&lt;h2 id=&#34;快速排序在数据基本有序的情况下时间复杂度会达到onn如何改进&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速排序在数据基本有序的情况下时间复杂度会达到onn如何改进&#34;&gt;#&lt;/a&gt; 快速排序在数据基本有序的情况下时间复杂度会达到 O (n*n)，如何改进？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;头、尾、中间三个元素取中间值作为基准元素&lt;/li&gt;
+&lt;li&gt;在一次分割结束后，可以把与 Key 相等的元素聚在一起，继续下次分割时，不用再对与 key 相等元素分割&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;c中有拷贝构造函数什么时候需要重写拷贝构造函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c中有拷贝构造函数什么时候需要重写拷贝构造函数&#34;&gt;#&lt;/a&gt; C++ 中有拷贝构造函数，什么时候需要重写拷贝构造函数？&lt;/h2&gt;
+&lt;p&gt;拷贝构造函数是使用类对象的引用作为参数的构造函数，它能够将参数的属性值拷贝给新的对象，完成新对象的初始化。一般三种情况我们可能需要重写拷贝构造函数&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用一个对象初始化另一个对象&lt;/li&gt;
+&lt;li&gt;对象作为实参传递给参数&lt;/li&gt;
+&lt;li&gt;函数返回值为类对象，创建临时对象作为返回值&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;什么是抽象类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是抽象类&#34;&gt;#&lt;/a&gt; 什么是抽象类&lt;/h2&gt;
+&lt;p&gt;如果一个类中没有包含足够的信息来描绘一个具体的对象，这样的类就是抽象类。抽象类不能实例化对象，所以抽象类必须被继承，才能被使用&lt;/p&gt;
+&lt;h2 id=&#34;头指针和头结点的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#头指针和头结点的区别&#34;&gt;#&lt;/a&gt; 头指针和头结点的区别&lt;/h2&gt;
+&lt;p&gt;头指针是指链表指向第一个结点的指针，若链表有头结点，则是指向头结点的指针&lt;/p&gt;
+&lt;p&gt;头结点是为了操作的统一和方便而设立的，放在第一个元素的结点之前，其数据域一般无意义&lt;/p&gt;
+&lt;h2 id=&#34;bfs和dfs的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bfs和dfs的区别&#34;&gt;#&lt;/a&gt; BFS 和 DFS 的区别&lt;/h2&gt;
+&lt;p&gt;DFS 使用栈，相当于二叉树的先序遍历&lt;/p&gt;
+&lt;p&gt;BFS 使用队列，相当于二叉树的层序遍历&lt;/p&gt;
+&lt;h2 id=&#34;什么是稳定的排序算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是稳定的排序算法&#34;&gt;#&lt;/a&gt; 什么是稳定的排序算法&lt;/h2&gt;
+&lt;p&gt;序列中，存在多个具有相同的关键字的记录，经过排序，这些记录的相对次序保持不变&lt;/p&gt;
+&lt;h2 id=&#34;堆排序的排序过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#堆排序的排序过程&#34;&gt;#&lt;/a&gt; 堆排序的排序过程&lt;/h2&gt;
+&lt;h1 id=&#34;操作系统类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统类&#34;&gt;#&lt;/a&gt; 操作系统类&lt;/h1&gt;
+&lt;h2 id=&#34;进程的7个状态&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#进程的7个状态&#34;&gt;#&lt;/a&gt; 进程的 7 个状态&lt;/h2&gt;
+&lt;p&gt;创建、就绪、运行、阻塞、终止、就绪挂起、阻塞挂起&lt;/p&gt;
+&lt;h2 id=&#34;操作系统如何实现内存保护&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统如何实现内存保护&#34;&gt;#&lt;/a&gt; 操作系统如何实现内存保护&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;上、下限寄存器&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重定位寄存器&lt;/strong&gt;和&lt;strong&gt;界地址寄存器&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;进程控制块包含哪些信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#进程控制块包含哪些信息&#34;&gt;#&lt;/a&gt; 进程控制块包含哪些信息&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;进程标识、进程状态、优先级、中断现场、所占资源&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;用户态和内核态之间的转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户态和内核态之间的转换&#34;&gt;#&lt;/a&gt; 用户态和内核态之间的转换&lt;/h2&gt;
+&lt;p&gt;用户态 ——&amp;gt; 内核态：系统调用、中断、异常、主程序出错&lt;/p&gt;
+&lt;p&gt;内核态 ——&amp;gt; 用户态：使用修改 CPU 状态寄存器这一特权指令&lt;/p&gt;
+&lt;h2 id=&#34;中断和异常几种情况看一下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#中断和异常几种情况看一下&#34;&gt;#&lt;/a&gt; 中断和异常几种情况看一下&lt;/h2&gt;
+&lt;h1 id=&#34;数据库类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据库类&#34;&gt;#&lt;/a&gt; 数据库类&lt;/h1&gt;
+&lt;h2 id=&#34;mysql中的索引是用什么实现的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql中的索引是用什么实现的&#34;&gt;#&lt;/a&gt; Mysql 中的索引是用什么实现的？&lt;/h2&gt;
+&lt;p&gt;B 树和 B + 树&lt;/p&gt;
+&lt;h2 id=&#34;什么是数据库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是数据库&#34;&gt;#&lt;/a&gt; 什么是数据库&lt;/h2&gt;
+&lt;p&gt;按照数据结构来组织、存储和管理数据的仓库&lt;/p&gt;
+&lt;h2 id=&#34;数据库中索引的作用和优缺点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据库中索引的作用和优缺点&#34;&gt;#&lt;/a&gt; 数据库中索引的作用和优缺点&lt;/h2&gt;
+&lt;p&gt;为了提高查询速度而对表字段附加的一种标识&lt;/p&gt;
+&lt;p&gt;优点是能提高查询的速度&lt;/p&gt;
+&lt;p&gt;缺点是会增大数据库的数据量&lt;/p&gt;
+&lt;h1 id=&#34;计算机网络类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机网络类&#34;&gt;#&lt;/a&gt; 计算机网络类&lt;/h1&gt;
+&lt;h2 id=&#34;udp的主要特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#udp的主要特点&#34;&gt;#&lt;/a&gt; UDP 的主要特点&lt;/h2&gt;
+&lt;p&gt;无连接、尽最大努力交付、没有拥塞控制、首部开销小、支持一对多通信&lt;/p&gt;
+&lt;h1 id=&#34;神经网络类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#神经网络类&#34;&gt;#&lt;/a&gt; 神经网络类&lt;/h1&gt;
+&lt;h2 id=&#34;深度神经网络为什么要用非线性激活函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#深度神经网络为什么要用非线性激活函数&#34;&gt;#&lt;/a&gt; 深度神经网络为什么要用非线性激活函数&lt;/h2&gt;
+&lt;p&gt;如果不用激活函数，每一层输出都是上层输入的线性函数，很容易验证，无论你神经网络有多少层，输出都是输入的线性组合，与没有隐藏层效果相当&lt;/p&gt;
+&lt;h2 id=&#34;sigmoid激活函数和softmax激活函数的主要区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sigmoid激活函数和softmax激活函数的主要区别&#34;&gt;#&lt;/a&gt; sigmoid 激活函数和 softmax 激活函数的主要区别&lt;/h2&gt;
+&lt;p&gt;softmax 的计算的是一个比重，而 sigmoid 只是对每一个输出值进行非线性化。&lt;/p&gt;
+</content>
+        <category term="XXX" />
+        <updated>2023-03-08T13:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E8%8B%B1%E8%AF%AD%E9%97%AE%E9%A2%98/</id>
+        <title>英语问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E8%8B%B1%E8%AF%AD%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;自我介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自我介绍&#34;&gt;#&lt;/a&gt; 自我介绍&lt;/h1&gt;
+&lt;p&gt;Good morning. I am glad to be here for this interview. My name is Zhang YunFeng, 22. I come from Xuancheng City, the southeast of Anhui Province. I major in Computer Science and Technology at BeiJing Wuzi University and will graduate here in this coming June. （介绍自己）&lt;/p&gt;
+&lt;p&gt;I am open-minded, quick in thought and very fond of new technology. Frequently I exchange with other people by making comments in the forum on line. I’m also with great perseverance. During the days preparing for the first postgraduate examination, I insist on playing badminton once a week. And just owning to this, I can be active and get along well with others. （基本优点 + 大学生活）&lt;/p&gt;
+&lt;p&gt;After four year’s learning, I am deeply attracted by the dynamic and positive atmosphere of our major. So I hope to pursue advanced study to broaden my horizon. And I truly believe, I can be a better person after three year’s learning, of course, if I’m lucky enough to be admitted to the &lt;strong&gt;Beijing Institute of Technology&lt;/strong&gt;**.** （报考学校的理由）&lt;/p&gt;
+&lt;p&gt;I always believe that one will easily lag behind unless he keeps on learning. Therefore, During my postgraduate study, study and scientific research will be my first priority. I hope I can form a systematic view of computer science and technology and make a solid foundation for future study. I would be very honored if I can do any little contribution in this field. （生涯规划）&lt;/p&gt;
+&lt;p&gt;That’s all about my self introduction, thank you!&lt;/p&gt;
+&lt;h1 id=&#34;introduce-my-hometown介绍家乡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduce-my-hometown介绍家乡&#34;&gt;#&lt;/a&gt; Introduce my hometown 介绍家乡&lt;/h1&gt;
+&lt;p&gt;I am from a famous city with a long history over 2,000 years. It is called “Xuancheng ”. Xuancheng City is located in the southeast of Anhui Province. It is a thousand year county prefecture with a long history. It has been called Xuancheng County, Xuanzhou and Ningguo Prefecture successively. Known as “Xuancheng ancient poet land”, “Shangjiang humanities flourishing capital Xuancheng” said; Jingting Mountain is known as the “No.1 Poetry Mountain in the South of the Yangtze River”. I think the city really deserves it. Li Bai visited Xuancheng seven times and left more than 80 poems. Visitors at home and abroad feel it comfortable visiting here. There is my beloved hometown.&lt;/p&gt;
+&lt;h1 id=&#34;why-do-you-choose-to-further-study-instead-of-going-to-work-after-graduation为什么考研&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#why-do-you-choose-to-further-study-instead-of-going-to-work-after-graduation为什么考研&#34;&gt;#&lt;/a&gt; Why do you choose to further study instead of going to work after graduation? 为什么考研？&lt;/h1&gt;
+&lt;p&gt;Firstly, I am very interested in my major, and I think what I have learned during the undergraduate period is not deep enough. I want to learn more professional knowledge and further improve myself through the three-year postgraduate study.&lt;/p&gt;
+&lt;p&gt;Then, my performance in the college entrance examination is not very ideal, and I want to be admitted to a better school to prove my ability&lt;/p&gt;
+&lt;p&gt;In a word, I look forward to laying a solid foundation for my future career after completing my studies here.&lt;/p&gt;
+&lt;h1 id=&#34;introduce-your-favorite-sportintroduce-your-hobby&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduce-your-favorite-sportintroduce-your-hobby&#34;&gt;#&lt;/a&gt; Introduce your favorite sport/Introduce your hobby&lt;/h1&gt;
+&lt;p&gt;My favorite sport is playing badminton. Playing badminton needs the cooperation of eyes, hands and feet.During the days preparing for the first postgraduate examination, I insist on playing badminton once a week. Through playing badminton, I developed my team spirit and learned how to cooperate with others to win games. It also improves my communication skills, enables me to get a good interpersonal relationship, and can prevent myopia, which is also good for cervical spine.&lt;/p&gt;
+&lt;h1 id=&#34;introduce-my-family介绍家庭&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduce-my-family介绍家庭&#34;&gt;#&lt;/a&gt; Introduce my family 介绍家庭&lt;/h1&gt;
+&lt;p&gt;​    In my family, there are three members, my father, my mother and me. My parents are workers, my father works very hard, he is always busy, so most of the housework is done by my mother, of course, when I am at home, I will help her. When I make a success, they are more excited than me, and support me to do better. Even though I failed, instead of blaming, they always share sorrow with me, and encourage me not to give up. So I will do all what I can to repay them.&lt;/p&gt;
+&lt;h1 id=&#34;introduce-my-school介绍学校&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#introduce-my-school介绍学校&#34;&gt;#&lt;/a&gt; Introduce my school 介绍学校&lt;/h1&gt;
+&lt;p&gt;My university, Beijing Wuzi University, is located in Beijing, the capital of China. It is a university characterized by logistics and circulation, based on economics and centered on management. Founded in 1980, it has been subordinate to the State General Administration of Materials, the Ministry of Materials and the Ministry of Domestic Trade. The university offers 28 undergraduate programs and 17 authorized disciplines for master’s degrees. In April 2022, the Youth League Committee of Beijing Materials University was honored as the “Beijing May 4th Red Flag Youth League Committee”.&lt;/p&gt;
+&lt;p&gt;我的学校是北京物资学院，坐落于中国首都北京市，是一所以物流和流通为特色，以经济学科为基础，以管理学科为主干的大学。它于 1980 年建校，先后隶属于国家物资总局、物资部、国内贸易部。学校开设 28 个本科专业，拥有 17 个硕士授权学科。2022 年 4 月，北京物资学院团委被表彰为 “北京市五四红旗团委”。&lt;/p&gt;
+&lt;h1 id=&#34;talk-about-your-favorite-courses谈谈你最喜欢的课程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#talk-about-your-favorite-courses谈谈你最喜欢的课程&#34;&gt;#&lt;/a&gt; Talk about your favorite courses 谈谈你最喜欢的课程&lt;/h1&gt;
+&lt;p&gt;My favorite course is data structures. Data structure can let us understand the characteristics of computer processing objects, the actual problem involved in the processing objects expressed in the computer and to deal with them. At the same time, I also learned many commonly used algorithms, from which I improved my comprehensive application ability and professional quality.&lt;/p&gt;
+&lt;p&gt;我最喜欢的课程是数据结构。数据结构能够让我们了解计算机处理对象的特性，将实际问题中所涉及的处理对象在计算机中表示出来并对它们进行处理。与此同时，我还学习了很多常用的算法，从中提高了综合应用能力和专业素质。&lt;/p&gt;
+&lt;h1 id=&#34;what-is-artificial-intelligence什么是人工智能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#what-is-artificial-intelligence什么是人工智能&#34;&gt;#&lt;/a&gt; What is Artificial Intelligence 什么是人工智能&lt;/h1&gt;
+&lt;p&gt;Artificial intelligence is a branch of computer science that attempts to understand the nature of intelligence and produce new kinds of intelligent machines that can react in a similar way to human intelligence. The main goal is to make machines capable of complex tasks that would normally require human intelligence.&lt;/p&gt;
+&lt;p&gt;人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器。其主要目标是使机器能够胜任一些通常需要人类智能才能完成的复杂工作&lt;/p&gt;
+&lt;h1 id=&#34;difference-between-recursion-and-iteration&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#difference-between-recursion-and-iteration&#34;&gt;#&lt;/a&gt; Difference between recursion and iteration&lt;/h1&gt;
+&lt;p&gt;Recursion is the program calling itself&lt;/p&gt;
+&lt;p&gt;Iteration is to make use of the known variable value and get the new variable value according to the recursion formula&lt;/p&gt;
+&lt;p&gt;递归就是指程序调用自身&lt;/p&gt;
+&lt;p&gt;迭代是利用已知的变量值，根据递推公式不断演进得到变量新值&lt;/p&gt;
+&lt;h1 id=&#34;也会找英语小短文看过之后翻译&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#也会找英语小短文看过之后翻译&#34;&gt;#&lt;/a&gt; 也会找英语小短文，看过之后翻译&lt;/h1&gt;
+</content>
+        <category term="XXX" />
+        <updated>2023-03-08T13:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</id>
+        <title>项目问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/08/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%A4%8D%E8%AF%95/%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;springboot的优势&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#springboot的优势&#34;&gt;#&lt;/a&gt; Springboot 的优势&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;通过简化配置可以快速搭建 Spring 应用程序。&lt;/li&gt;
+&lt;li&gt;内嵌 servlet 容器，能够直接使用 java 的 main 方法启动，因此也不需要部署 war 包文件。&lt;/li&gt;
+&lt;li&gt;提供 starter 简化 Maven 配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;有监督学习和无监督学习的区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有监督学习和无监督学习的区别&#34;&gt;#&lt;/a&gt; 有监督学习和无监督学习的区别&lt;/h1&gt;
+&lt;p&gt;有监督：通过已有的训练样本（即已知数据及其对应的输出）去训练得到一个最优模型&lt;/p&gt;
+&lt;p&gt;无监督：由输入数据中学到或建立一个模型，并依此模式推测新的结果。输入数据没有被标记，也没有确定的结果。&lt;/p&gt;
+</content>
+        <category term="XXX" />
+        <updated>2023-03-08T13:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/06/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%AA%E8%AE%BA/</id>
+        <title>第一章：数据库系统概述</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/06/%E6%95%B0%E6%8D%AE%E5%BA%93/%E7%AC%AC%E4%B8%80%E7%AB%A0%E7%BB%AA%E8%AE%BA/"/>
+        <content type="html">&lt;h1 id=&#34;基本概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本概念&#34;&gt;#&lt;/a&gt; &lt;strong&gt;基本概念&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;** 数据：** 数据是描述事物的符号记录，数据的含义称为数据的语义&lt;/p&gt;
+&lt;p&gt;** 数据库：** 长期存储、有组织、可共享的大量数据集合&lt;/p&gt;
+&lt;p&gt;** 数据库管理系统：** 和操作系统一样是计算机的基础软件&lt;/p&gt;
+&lt;p&gt;** 数据库系统：** 由数据库、数据库管理系统、数据库管理员组成&lt;/p&gt;
+&lt;h1 id=&#34;技术的发展阶段&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#技术的发展阶段&#34;&gt;#&lt;/a&gt; &lt;strong&gt;技术的发展阶段&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;人工管理 —— 文件系统 —— 数据库系统&lt;/p&gt;
+&lt;h1 id=&#34;数据模型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据模型&#34;&gt;#&lt;/a&gt; &lt;strong&gt;数据模型&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;是对现实世界数据特征的抽象&lt;/p&gt;
+&lt;p&gt;![img](file:///C:/Users/admin/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)&lt;/p&gt;
+&lt;p&gt;最常用&lt;strong&gt;实体 - 联系&lt;/strong&gt;方法，即&lt;strong&gt; E-R 图&lt;/strong&gt;来表示概念模型&lt;/p&gt;
+&lt;p&gt;其中逻辑模型中的&lt;strong&gt;关系模型&lt;/strong&gt;是重点&lt;/p&gt;
+&lt;h1 id=&#34;数据库系统的三级模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据库系统的三级模式&#34;&gt;#&lt;/a&gt; 数据库系统的三级模式&lt;/h1&gt;
+&lt;p&gt;数据按外模式的描述提供给用户。&lt;/p&gt;
+&lt;p&gt;按内模式的描述存储在磁盘中。&lt;/p&gt;
+&lt;p&gt;模式提供了连接这两级的相对稳定的中间观点，并使得两级中任何一级的改变不受另一级的牵制。&lt;/p&gt;
+&lt;p&gt;** 外模式 / 模式映象：** 保证数据的逻辑独立性&lt;/p&gt;
+&lt;p&gt;** 模式 / 内模式映象：** 保证数据的物理独立性&lt;/p&gt;
+&lt;p&gt;![img](file:///C:/Users/admin/AppData/Local/Temp/msohtmlclip1/01/clip_image003.png)&lt;/p&gt;
+&lt;h1 id=&#34;数据库系统组成部分&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据库系统组成部分&#34;&gt;#&lt;/a&gt; 数据库系统组成部分&lt;/h1&gt;
+&lt;p&gt;硬件平台及数据库&lt;/p&gt;
+&lt;p&gt;软件支持系统&lt;/p&gt;
+&lt;p&gt;各类人员&lt;/p&gt;
+</content>
+        <category term="数据库" />
+        <updated>2023-03-06T10:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/</id>
+        <title>C++问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/04/C/C++%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;p&gt;使用范围 for 语句时，变量需定义在内部&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;for(auto c : line)
+		c=toupper(c);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;字符串转整数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串转整数&#34;&gt;#&lt;/a&gt; 字符串转整数&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;string s=&amp;quot;123&amp;quot;;
+stringstream ss;
+int x=0;
+ss&amp;lt;&amp;lt;s;
+ss&amp;gt;&amp;gt;x;
+cout&amp;lt;&amp;lt;x+1&amp;lt;&amp;lt;endl;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;整数转字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#整数转字符串&#34;&gt;#&lt;/a&gt; 整数转字符串&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;int s=123;
+stringstream ss;
+string x;
+ss&amp;lt;&amp;lt;s;
+ss&amp;gt;&amp;gt;x;
+cout&amp;lt;&amp;lt;x&amp;lt;&amp;lt;endl;
+return 0;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="细节问题" />
+        <updated>2023-03-04T03:24:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/03/01/%E5%8C%BA%E5%9D%97%E9%93%BE/Hyperledger%20Fabric%E8%81%94%E7%9B%9F%E9%93%BE%E7%AE%80%E4%BB%8B/</id>
+        <title>联盟链简介</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/03/01/%E5%8C%BA%E5%9D%97%E9%93%BE/Hyperledger%20Fabric%E8%81%94%E7%9B%9F%E9%93%BE%E7%AE%80%E4%BB%8B/"/>
+        <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC85MTQzMTg4NQ==&#34;&gt;区块链交易原理&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC84OTMzMzQwMg==&#34;&gt;公有链、私有链、联盟链的区别&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21hb3FpdWtlamkvYXJ0aWNsZS9kZXRhaWxzLzExOTcyOTM3NQ==&#34;&gt;许可区块链与无许可区块链&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oeXBlcmxlZGdlci1mYWJyaWMucmVhZHRoZWRvY3MuaW8vemhfQ04vbGF0ZXN0L2luZGV4Lmh0bWw=&#34;&gt;Hyperledger Fabric 文档&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;什么是挖矿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是挖矿&#34;&gt;#&lt;/a&gt; 什么是挖矿&lt;/h1&gt;
+&lt;p&gt;传统商品的供应链，大家都比较熟悉，简单划分就是：生产 —— 交易 —— 使用。作为一般等价物的比特币，也存在着这 3 个环节：生产 —— 交易 —— 应用。了解了比特币的生产环节，也明白了什么叫做 “挖矿”。&lt;/p&gt;
+&lt;p&gt;区块链的本质，是一个分布式的公共账本，是一个记账系统，每一个参与的点，都可以在上边记账。虽然每一个参与的点都有记账的权利，但是这个账到底怎么一个计法？谁来记？怎么记？&lt;/p&gt;
+&lt;p&gt;比特币采用了一种叫做 PoW 工作量证明的机制。大概意思是说，每个节点都想记账，那么到底由哪个节点来记呢？计算能力最强大的那一个记喽。&lt;/p&gt;
+&lt;p&gt;谁的计算能力最强大呢？那就得比一比了，怎么比？数学竞赛！系统每次会出一道数学题，只有最快解出这道题目的计算机才能进行记账。获得了这个记账权的计算机，同时获得一个单位的比特币奖励。&lt;/p&gt;
+&lt;p&gt;“一个单位” 到底是多少？这得从比特币的分配机制说起。比特币是模拟黄金的储量和发行速度的。在储量上，比特别是限量发行的，总量有且只有 2100 万枚。在发行速度上，比特币有个 “减半机制”，每产生 21 万个区块（几乎是每 4 年），就进行一次减半：最开始获得一次记账权，奖励 50 个比特币；2012 年 12 月 28 日，比特币迎来第一次减半，获得一次记账权，奖励只有 25 个比特币；2016 年 7 月 9 日，比特别迎来第二次减半，获得一次记账权，奖励只有 12.5 个比特币了。&lt;/p&gt;
+&lt;p&gt;比特币既然模拟黄金，那获得比特币也就被叫做 “挖矿” 了。挖矿，就是计算机们参与到数据竞赛中，并获得比特币奖励的过程。挖矿的人，就叫做矿工。&lt;/p&gt;
+&lt;p&gt;最开始算力竞争不激烈的时候，大家在家里或者办公室里，用 CPU 挖矿，然后用 1 万枚比特币买了俩披萨那个哥们儿，开创了用 GPU 挖矿，这股风潮一度带动了 GPU 断货。&lt;/p&gt;
+&lt;p&gt;但是挖着挖着，竞争越来越激烈，大家发现 GPU 算力也跟不上了。于是就有了专门的矿机。矿机就是专门用来挖币的电脑，搭载有专业的挖矿晶元，多采用烧显卡的方式工作。矿机有两个缺点：一是产生较大噪音 —— 这也是为什么家庭挖矿不太可行；二是耗电量较大，有网友一台挖矿机 3 个月就用 1000 多度电，这么高的电费，很有可能把挖矿赚的钱抵消，或倒贴赔钱。&lt;/p&gt;
+&lt;p&gt;单个矿机作战力还是跟不上，然后就有了矿场和矿池。&lt;/p&gt;
+&lt;p&gt;“矿场” 就是把矿机放到一起，集中管理。早期特别粗放，就是弄个架子，把矿机挨个摞到架子上就可以了，后来发现这样会导致矿机损耗，就开始有了通风、隔尘、室内温度湿度等要求。矿场一般建立在电费比较便宜，比较稳定的地方，比如内蒙、四川。得益于中国完善的电力基础设施建设、廉价的火电水电或风电资源，中国力量也一直垄断着比特币矿场。&lt;/p&gt;
+&lt;p&gt;“矿池” 则是突破了地理位置的限制 —— 多人合作挖矿，将少量算力合并、联合运作，使用这种方式建立的网站便被称作矿池。&lt;/p&gt;
+&lt;h1 id=&#34;联盟链&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#联盟链&#34;&gt;#&lt;/a&gt; 联盟链&lt;/h1&gt;
+&lt;h2 id=&#34;1-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-简介&#34;&gt;#&lt;/a&gt; 1. 简介&lt;/h2&gt;
+&lt;p&gt;区块链作为一种分布式账本技术，主要分为许可链和非许可链。其中许可链又分为私有链和联盟链。和 BTC 或 ETH 不同，联盟链是一种需要身份认证的区块链。只有通过认证的节点或组织才能参与联盟链网络中的交易。&lt;/p&gt;
+&lt;h2 id=&#34;2-hyperledger-fabric&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-hyperledger-fabric&#34;&gt;#&lt;/a&gt; 2. Hyperledger fabric&lt;/h2&gt;
+&lt;p&gt;Hyperledger fabric 是一种联盟链。fabric 网络中的成员都需要在可信赖的成员服务提供者处注册，否则不能参与交易。/&lt;em&gt; 因此围绕联盟链产生了一些争议，一些人认为以 fabric 为代表的联盟链并不是真正的区块链，而另一些人则持反对意见。&lt;/em&gt;/&lt;/p&gt;
+&lt;p&gt;fabric 有一个特有的功能，通道（channel）。通道中的成员与通道外的成员的相互隔绝的，只有同一个通道的成员能够共享账本，不同通道的成员之间的交易记录是不可互相查询的。值得一提的是，同一个节点可以加入不同的通道。&lt;/p&gt;
+&lt;p&gt;fabric 的共识机制是可以拔插的。共识机制是一个分布式系统里的名词，就是在不同的系统中并保持副本的一致性。fabric 允许网络中的节点自行选择最能代表参与者需求的共识机制。&lt;/p&gt;
+&lt;p&gt;fabric 中的账本系统包括两个组件：世界状态（数据库）和交易日志（历史记录）。每个参与者都拥有他们所属的 fabric 网络的账本副本。世界状态描述了账本在给定时间点的状态。它是账本的数据库，记录了当前状态的所有交易，是世界状态的更新历史。交易日志是不可插拔的，它只记录区块链网络中使用账本数据库前后的值。&lt;/p&gt;
+&lt;h2 id=&#34;3-fabric的身份&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-fabric的身份&#34;&gt;#&lt;/a&gt; 3. Fabric 的身份&lt;/h2&gt;
+&lt;p&gt;身份是联盟链区别与公链的一个最重要特征。在公链中是没有身份这个概念的，每个节点都是相同的角色。而&lt;em&gt; fabric 身份是联盟链中最重要的概念，甚至可以没有之一&lt;/em&gt;。联盟链中的身份确定了对资源的确切权限以及对参与者在区块链网络中拥有的信息的访问权限。&lt;/p&gt;
+&lt;p&gt;整个网络中分为几种角色：peer 节点（提交节点和背书节点），证书颁发机构 CA，其中成员服务提供者（Membership Service Provider, MSP）是一个可信任的权威机构，它不是 fabric 中的角色，但是为 fabric 中的节点提供可信的身份认证。fabric 中，默认的 MSP 实现使用 X.509 证书（使用最广泛的证书结构标准，包括证书信息 / 签名算法 / 数字签名等内容）作为身份，采用公钥基础结构（Pubic Key Infrastructure, PKI）作为分层模型。PKI 是身份供应商，为接入区块链网络的用户提供一个身份列表，用户的身份只能在身份列表的包含范围内选择；而 MSP 是接受身份供应商，会提供一个列表来确定哪些身份是可信的成员（也就是参与者）。&lt;/p&gt;
+&lt;h2 id=&#34;4-公钥基础结构pubic-key-infrastructure-pki&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-公钥基础结构pubic-key-infrastructure-pki&#34;&gt;#&lt;/a&gt; 4. 公钥基础结构（Pubic Key Infrastructure, PKI）&lt;/h2&gt;
+&lt;p&gt;PKI 有四个关键要素：数字证书 / 公钥私钥 / 证书颁发机构和证书撤销列表：&lt;/p&gt;
+&lt;p&gt;数字证书包含了证书持有者（区块链网络参与者）的相关属性，其中最常见的证书类型就是 X.509 标准。最关键的是，证书持有者的公钥会在其证书中分发。数字签名可以验证消息的来源以及消息的完整性。&lt;/p&gt;
+&lt;p&gt;公钥私钥的作用是为了验证数字签名（如 Fig 1），这里用到了我们常说的非对称加密。密钥之间唯一的数学关系使得私钥在消息上的签名只有对应的公钥在相同的消息上才能匹配。参与者用私钥加密，而任何持有其公钥的用户都可以查看签名消息并验证签名。其中的公钥是每一个节点都可以使用的，用于充当授权锚；私钥被用在消息中产生数字签名。消息的接收者可以通过其所持有的发送者的公钥来验证数字签名的有效性，进而验证消息的来源和完整性。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://pic3.zhimg.com/80/v2-204c5b09ffdc82bf4612f31d7ee4be0a_1440w.webp&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Fig 1 数字签名&lt;/p&gt;
+&lt;p&gt;证书颁发机构（Certificate Authority，CA）&lt;/p&gt;
+&lt;p&gt;CA 是一个区块链网络信任的权威机构，它可以向参与者或者节点颁发经过加密验证的数字证书。CA 向不同的参与者颁发证书，并对这些证书进行签名，将参与者的公钥绑定上去（可以选择包含参与者全部属性的列表）。区块链网络中的成员信任 CA（并知道 CA 的公钥），则可以信任经过 CA 认证的证书，并通过验证 CA 的签名来获得签名中包含的所有属性。数字证书可以作为信任锚，来验证不同参与者的消息。区块链网络中可以存在一个或多个 CA。&lt;/p&gt;
+&lt;p&gt;CA 分为根 CA 和中间 CA，它们构成了一条信任链。根 CA 能够给整个网络中的用户颁发证书，中间 CA 的证书直接或间接地由根 CA 颁发，可以有隐藏和保护根 CA 的作用。&lt;/p&gt;
+&lt;p&gt;Fabric CA 是一个内置的 CA 组建，用来给 fabric 网络充当根 CA，提供和管理证书。&lt;/p&gt;
+&lt;p&gt;证书吊销列表（Certificate Revocation Lists，CRL）是一个被吊销证书的黑名单，CRL 上的证书都将被视为无效。&lt;/p&gt;
+&lt;h2 id=&#34;5-成员服务提供者membership-service-provider-msp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5-成员服务提供者membership-service-provider-msp&#34;&gt;#&lt;/a&gt; 5. 成员服务提供者（Membership Service Provider， MSP）&lt;/h2&gt;
+&lt;p&gt;PKI 解决了 fabric 网络中身份发放的问题，但由于节点的私钥永远都不会公开，因此还需要引入一种可以证实身份的机制 MSP 。&lt;/p&gt;
+&lt;p&gt;MSP 是一组被添加在网络中的配置文件夹，被用来在外部和内部定义组织（organization）。CA 生成代表身份的证书，而 MSP 包含了被许可身份的列表。MSP 通过识别成员或向成员颁发身份的 CA，来确定是否接受它们作为信任域的成员。MSP 通过标志参与者在节点或通道中的特定权利，将身份转化为角色。&lt;strong&gt;简而言之，PKI（具体说是 CA）提供的是身份；而 MSP 提供的是角色&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;当用户使用 Fabric CA 注册时，其必须关联为管理员 /peer 节点 / 客户端 / 排序节点 / 成员其中之一的角色。MSP 根据作用范围的不同分为：本地 MSP 和通道 MSP。本地 MSP 为客户端 /peer 节点 / 排序节点定义，每一个节点都必须定义一个本地 MSP。通道 MSP 则在通道层面定义了管理权和参与权，在通道中分配成员的权限，每一个参与通道的组织都要为自己定义一个通道 MSP。&lt;/p&gt;
+&lt;p&gt;因此，MSP 是一种能使参与者加入联盟链的机制，想要在 Fabric 网络上进行交易需要：&lt;/p&gt;
+&lt;p&gt;1. 拥有一个 CA 颁发的身份；2. 成为一个被网络中的成员认可的组织成员（将成员的公钥添加到组织的 MSP 中即可）；3. 将 MSP 添加到一个网络中的联盟或通道中；4. 确保 MSP 包含在网络所定义的策略（Policy）中。&lt;/p&gt;
+&lt;h2 id=&#34;6-策略policy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6-策略policy&#34;&gt;#&lt;/a&gt; 6. 策略（Policy）&lt;/h2&gt;
+&lt;p&gt;在 Fabric 中，策略是基础设施的管理机制。它表示了成员如何同意或拒绝网络 / 通道 / 智能合约的更改。策略是在区块链网络最初配置时由联盟成员一致同意的，但在网络演化的过程中可以更改。简而言之，在区块链网络中的所有行为都要受到策略的控制。&lt;/p&gt;
+&lt;p&gt;策略是 Fabirc 区别于公链的内容之一。在公链中，交易可以在网络中的任意节点中生成和验证，但是 Fabric 是许可链的一种，因此策略决定了哪些组织可以访问或更新 Fabric 网络，并且提供了强制执行这些决策的机制。从这个角度看，我认为 Fabric 的可监管性更强。&lt;/p&gt;
+&lt;p&gt;策略在 Fabric 网络的不同层级中都有应用。至于具体应用和访问控制列表（Access Control List，ACL）就放在后面再学了，这部分我感觉更偏向与工程实践。&lt;/p&gt;
+&lt;p&gt;另外专门说两个我认为比较关键的策略：背书策略（Endorsement policy）定义了必须为执行提案背书的组织；修改策略（Modification policy）指定了任何配置更新所需要的一组身份，是更新策略的策略，每一个通道配置中都包含一个对修改策略的引用。&lt;/p&gt;
+</content>
+        <category term="区块链" />
+        <updated>2023-03-01T02:31:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/</id>
+        <title>C语言问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/28/C/C%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;数组名取地址a&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组名取地址a&#34;&gt;#&lt;/a&gt; 数组名取地址 &amp;amp; a&lt;/h1&gt;
+&lt;p&gt;a 是一个数组名，对于一个普通的变量 b，&amp;amp;b 是指用取地址符号取得变量 b 的存放地址；a 在内存中没有分配空间，只对数组 a 的各个元素分配了存储空间，此处数组名字 a 显然不是普通的变量，&amp;amp;a 也不代表所取 a 的存储地址。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;amp;a 在数值上等于 &amp;amp; a [0]，也等于 a。&lt;strong&gt;此时，&amp;amp;a 数值上等于整个数组的起始位置地址，含义上代表整个数组所占内存的大小，因为它的&lt;/strong&gt;进阶单位是整个数组的字节长度&lt;/strong&gt;，（&amp;amp;a + 1）等于的是数组结束之后的下一段的起始位置地址。&lt;/p&gt;
+</content>
+        <category term="细节问题" />
+        <updated>2023-02-28T09:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/</id>
+        <title>python环境配置</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/"/>
+        <content type="html">&lt;h1 id=&#34;anaconda装完后pip无法使用的问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#anaconda装完后pip无法使用的问题&#34;&gt;#&lt;/a&gt; anaconda 装完后，pip 无法使用的问题&lt;/h1&gt;
+&lt;p&gt;系统的环境变量的 path 中，&lt;/p&gt;
+&lt;p&gt;D:Anaconda3&lt;/p&gt;
+&lt;p&gt;D:Anaconda3\Library\bin&lt;/p&gt;
+&lt;p&gt;D:Anaconda3\Scripts&lt;/p&gt;
+&lt;p&gt;均要添加&lt;/p&gt;
+</content>
+        <category term="环境" />
+        <updated>2023-02-27T13:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/26/%E7%BD%91%E5%9D%80%E6%8E%A8%E8%8D%90/%E5%AD%A6%E4%B9%A0%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA/</id>
+        <title>网址导航</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/26/%E7%BD%91%E5%9D%80%E6%8E%A8%E8%8D%90/%E5%AD%A6%E4%B9%A0%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA/"/>
+        <content type="html">&lt;h1 id=&#34;编程语言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编程语言&#34;&gt;#&lt;/a&gt; 编程语言&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWM0NDExZTc3dA==&#34;&gt;Python 基础 (小甲鱼 - 新版)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWV0NDExYjczWi8=&#34;&gt;黑马程序员 C++ 教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;sketchup模型获取&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sketchup模型获取&#34;&gt;#&lt;/a&gt; sketchup 模型获取&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuM2Q2Ni5jb20v&#34;&gt;3D 溜溜网&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;unity3d模型获取&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unity3d模型获取&#34;&gt;#&lt;/a&gt; Unity3D 模型获取&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYWlnZWkuY29tL3VuaXR5M2QvbW9kZWwv&#34;&gt;爱给网&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuM2Q2Ni5jb20v&#34;&gt;3D 溜溜网&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="网址" />
+        <updated>2023-02-26T06:26:08.234Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/26/%E7%94%9F%E6%B4%BB/%E5%8C%97%E4%BA%AC%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/</id>
+        <title>北京游玩攻略</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/26/%E7%94%9F%E6%B4%BB/%E5%8C%97%E4%BA%AC%E6%B8%B8%E7%8E%A9%E6%94%BB%E7%95%A5/"/>
+        <content type="html">&lt;h1 id=&#34;吃&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#吃&#34;&gt;#&lt;/a&gt; 吃&lt;/h1&gt;
+&lt;p&gt;牛街                 西城区约 2 小时&lt;/p&gt;
+&lt;p&gt;王府井               东城区约 2 小时&lt;/p&gt;
+&lt;p&gt;前门大栅栏           西城区约 2 小时&lt;/p&gt;
+&lt;p&gt;南锣鼓巷             东城区约 2 小时&lt;/p&gt;
+&lt;p&gt;合生汇               朝阳区约两小时 20 分&lt;/p&gt;
+&lt;h1 id=&#34;逛街&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#逛街&#34;&gt;#&lt;/a&gt; 逛街&lt;/h1&gt;
+&lt;p&gt;三里屯太古里         朝阳区约 2 小时&lt;/p&gt;
+&lt;p&gt;朝阳大悦城           朝阳区约 2 小时 20 分&lt;/p&gt;
+&lt;p&gt;侨福芳草地           朝阳区约 2 小时&lt;/p&gt;
+&lt;p&gt;八达岭奥特莱斯       昌平区约 40 分钟&lt;/p&gt;
+&lt;h1 id=&#34;著名景点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#著名景点&#34;&gt;#&lt;/a&gt; 著名景点&lt;/h1&gt;
+&lt;p&gt;故宫博物院           东城区约 2 小时                   20-40 / 人          08:30 开园&lt;/p&gt;
+&lt;p&gt;颐和园               海淀区约 1 小时 40 分              10-20 / 人          06:30 开园&lt;/p&gt;
+&lt;p&gt;天安门               东城区约 2 小时 05:15-18:00        网上预约&lt;/p&gt;
+&lt;p&gt;天坛                 东城区约 2 小时 10 分              28 / 人            06:30 开园&lt;/p&gt;
+&lt;p&gt;十三陵               昌平区约 1 小时 10 分              93 / 人            09:00-16:00&lt;/p&gt;
+&lt;p&gt;恭王府               西城区约 1 小时 40 分              学生半价&lt;/p&gt;
+&lt;p&gt;鸟巢                 朝阳区约 2 小时                   98 / 人            09:00-18:30&lt;/p&gt;
+&lt;p&gt;香山                 海淀区约 2 小时 20 分              10 / 人            06:00 开园&lt;/p&gt;
+&lt;p&gt;八达岭野生动物世界  延庆区约 1 小时 20 分              43 / 人 (83)        08:30 开园&lt;/p&gt;
+&lt;p&gt;八达岭长城 + 夜场      延庆区约 1 小 30 分                17.5 / 人 (35)       07:30 开园&lt;/p&gt;
+&lt;p&gt;居庸关长城           昌平区约 1 小时                   17.5 / 人 (35)       08:30-16:30&lt;/p&gt;
+&lt;p&gt;雁栖湖               怀柔区约 3 小时                   10 / 人 (20)        08:30 开园&lt;/p&gt;
+&lt;h1 id=&#34;寺庙&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#寺庙&#34;&gt;#&lt;/a&gt; 寺庙&lt;/h1&gt;
+&lt;p&gt;雍和宫               东城区约 1 小时 40 分              网上购票        09:00 开园&lt;/p&gt;
+&lt;p&gt;红螺寺               怀柔区约 3 小时                   27 / 人 (54)        08:30 开园&lt;/p&gt;
+&lt;p&gt;潭柘寺               门头沟区约 3 小时                 24 / 人 (49)        08:30 开园&lt;/p&gt;
+&lt;h1 id=&#34;各种馆&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#各种馆&#34;&gt;#&lt;/a&gt; 各种馆&lt;/h1&gt;
+&lt;p&gt;中国科学技术馆       朝阳区约 2 小时 20 分              116 / 人 (126)      09:30 开园&lt;/p&gt;
+&lt;p&gt;天文馆               西城区约 2 小时                   79 / 人 (88)        09:00 开园&lt;/p&gt;
+&lt;p&gt;海洋馆               海淀区约 2 小时                   83 起 / 人         10:00 开园&lt;/p&gt;
+&lt;h1 id=&#34;玩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#玩&#34;&gt;#&lt;/a&gt; 玩&lt;/h1&gt;
+&lt;p&gt;北京环球影城         通州区约两个半小时           378-413 / 人       10:00-19:00&lt;/p&gt;
+&lt;p&gt;北京欢乐谷           朝阳区约两个半小时           295 / 人           10:00 开园&lt;/p&gt;
+&lt;p&gt;失重星球乐园（欢乐谷店）约两个半小时             97 / 人            10:00-18:00&lt;/p&gt;
+&lt;p&gt;Super rabbit 运动会    昌平区约一个半小时          106 / 人          10:00-21:00&lt;/p&gt;
+&lt;p&gt;新港卡丁车俱乐部（奥森店）朝阳区                118 / 人 (108)      09:00-22:00&lt;/p&gt;
+&lt;h1 id=&#34;感谢橘子先生的投稿&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#感谢橘子先生的投稿&#34;&gt;#&lt;/a&gt; 感谢&lt;a href&gt; @橘子先生&lt;/a&gt;的投稿&lt;/h1&gt;
+</content>
+        <category term="玩" />
+        <updated>2023-02-25T16:16:12.864Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/</id>
+        <title>sketchup导入Unity3d</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/25/sketchup/sketchup%E5%AF%BC%E5%85%A5Unity3d/"/>
+        <content type="html">&lt;ol&gt;
+&lt;li&gt;新建 SketchUp 工程的时候，选择工程单位为 Meter (米)，如果不是米，则在 Tools -&amp;gt; Model Info -&amp;gt; Unit 内将 Format 修改为 Decimal : Meters 即可。因为会影响到 SketchUp 的原图，所以请注意如果精度不够的话还需要把 Precision 变更为足够的精度，把 Enable length snapping 也设置为和精度一致使其能够正确的执行自动捕捉。&lt;/li&gt;
+&lt;li&gt;导出时注意选择参数，请选择 File -&amp;gt; Export -&amp;gt; 3D Model 里面有 FBX 这个格式（好像只有 Pro 版本的 SketchUp 才行哦），先不要着急 Export，选择一下 Options 修改几个选项，Export Options 中的&lt;br&gt;
+选中 Triangulate all faces 将所有面变为三角形构成的&lt;br&gt;
+选中 Export two-sided faces 将双面都导出（有的平面两面材质不同的，这很重要）&lt;br&gt;
+选中 Export texture maps 导出贴图表面&lt;br&gt;
+选中 Swap YZ coordinates（Y 朝上）&lt;br&gt;
+单位选择 Model Unit（如果你第一步是对的，这里选 Meters 也是一样的效果）&lt;/li&gt;
+&lt;li&gt;在 Unity3D 中选择 Asserts -&amp;gt; Import New Asset，找到刚刚导出的 fbx 文件，选中，文件导入成功后选择 Project 窗口中的模型，然后将其 Inspector 中的 (FBXImporter) -&amp;gt; Meshes -&amp;gt; Scale Factor（缩放比例）修改为 1。最后将模型拖入场景子级就大功告成啦。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="3d建模" />
+        <updated>2023-02-25T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/24/sketchup/sketchup%E5%AF%BC%E5%85%A53dsmax/</id>
+        <title>sketchup导入3dsmax</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/24/sketchup/sketchup%E5%AF%BC%E5%85%A53dsmax/"/>
+        <content type="html">&lt;p&gt;sketchup——》unity3d 丢失模型贴图问题解决：打开 su 模型，文件→另存为→保存文件类型下拉另存为 8 版本&lt;img data-src=&#34;sketchup%E5%AF%BC%E5%85%A53dsmax/image-20230225153742223.png&#34; alt=&#34;image-20230225153742223&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="3d建模" />
+        <updated>2023-02-24T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/24/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
+        <title>本站自身建设</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/24/shoka%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+        <content type="html">&lt;h1 id=&#34;写博客注意事项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#写博客注意事项&#34;&gt;#&lt;/a&gt; 写博客注意事项&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在博客的开头，使用 YAML Font Matter 包围以下文字&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;title: XXX&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;date: 2023/02/24 20:46:25 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;categories: &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- XXX &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;tags: &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;- XXX&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;不能直接把网址放到文章中，要加超链接&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文章首页分类时，分类标题不能有字符，只能是英文和汉字&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;上传图片至本博客的图床中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#上传图片至本博客的图床中&#34;&gt;#&lt;/a&gt; 上传图片至本博客的图床中&lt;/h1&gt;
+&lt;p&gt;首先进入 https://smms.app/，&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;%E5%86%99%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/image-20230311173825147-16852626113381.png&#34; alt=&#34;image-20230311173825147&#34;&gt; 然后上传图片之后复制进 D:\myblog\themes\shoka_images.yml 文件中，按照上面格式添加即可。&lt;/p&gt;
+</content>
+        <category term="博客" />
+        <updated>2023-02-24T12:46:25.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ashgen.gitee.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/</id>
+        <title>实习面试问题</title>
+        <link rel="alternate" href="https://ashgen.gitee.io/2023/02/24/%E5%AE%9E%E4%B9%A0/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;h1 id=&#34;如何判断一个链表有无环&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#如何判断一个链表有无环&#34;&gt;#&lt;/a&gt; 如何判断一个链表有无环&lt;/h1&gt;
+&lt;h1 id=&#34;二叉树的遍历方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二叉树的遍历方式&#34;&gt;#&lt;/a&gt; 二叉树的遍历方式&lt;/h1&gt;
+&lt;h1 id=&#34;快速排序与冒泡排序的比较&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速排序与冒泡排序的比较&#34;&gt;#&lt;/a&gt; 快速排序与冒泡排序的比较&lt;/h1&gt;
+</content>
+        <category term="实习" />
+        <updated>2023-02-24T12:46:25.000Z</updated>
+    </entry>
+</feed>

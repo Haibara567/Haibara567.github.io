@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "寻找未曾见过的你 • All posts by \"环境\" tag",
+    "description": "吉兆要出现三次，幸运才会降临；谢幕时应当三次鞠躬；而在风来人的剑斗剧中，胜负的对手也有三名。",
+    "home_page_url": "https://ashgen.gitee.io",
+    "items": [
+        {
+            "id": "https://ashgen.gitee.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/",
+            "url": "https://ashgen.gitee.io/2023/02/27/python/anaconda%E7%8E%AF%E5%A2%83/",
+            "title": "python环境配置",
+            "date_published": "2023-02-27T13:46:25.000Z",
+            "content_html": "<h1 id=\"anaconda装完后pip无法使用的问题\"><a class=\"markdownIt-Anchor\" href=\"#anaconda装完后pip无法使用的问题\">#</a> anaconda 装完后，pip 无法使用的问题</h1>\n<p>系统的环境变量的 path 中，</p>\n<p>D:Anaconda3</p>\n<p>D:Anaconda3\\Library\\bin</p>\n<p>D:Anaconda3\\Scripts</p>\n<p>均要添加</p>\n",
+            "tags": [
+                "环境"
+            ]
+        }
+    ]
+}
